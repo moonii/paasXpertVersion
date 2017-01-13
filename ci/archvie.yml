@@ -1,0 +1,18 @@
+---
+platform: linux
+
+params:
+  ADMIN_USER:
+  VERSION:
+  PACKAGING:
+
+inputs:
+  #- name: reserved-job-git
+  - name: version-git
+  - name: design-git
+
+outputs:
+  - name: archive-out
+
+run:
+  path: version-git/ci/archive.sh
