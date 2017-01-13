@@ -4,7 +4,7 @@
 
 echo "archive.sh called"
 
-NEW_VERSION=$(cat version-git/version)
+NEW_VERSION=$(cat version22-git/version)
 echo "NEW_VERSION=$NEW_VERSION="
 
 if [$ADMIN_USER]; then
@@ -23,7 +23,7 @@ else
     	fi
 fi
 echo "dir=$dir/$dir_sub"
-cd  degisn-git/$(dir)/$(dir_sub)
+cd  ci3-git/$(dir)/$(dir_sub)
 echo "pwd=$pwd"
 
 zip archive-out/$(dir_sub)-v.$(NEW_VERSION).zip ./* -r 

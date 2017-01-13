@@ -8,11 +8,11 @@ params:
 
 inputs:
   #- name: reserved-job-git
-  - name: version-git
+  - name: ci3-git
   - name: design-git
 
 outputs:
   - name: archive-out
 
 run:
-  path: version-git/ci/archive.sh
+  path: ci3-git/ci/archive.sh
