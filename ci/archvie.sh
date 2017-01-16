@@ -11,14 +11,14 @@ echo "NEW_VERSION=$NEW_VERSION="
 NEW_VERSION=$(cat ci3-git/version)
 
 echo "NEW_VERSION=$NEW_VERSION="
-echo "ADMIN_USESR=$ADMIN_USESR="
+echo "ADMIN_USER=$ADMIN_USER="
 
-if [$ADMIN_USER]; then
+if [ $ADMIN_USER ]; then
 	dir = "PaaSXpertPortal"
         dir_sub="paasxpert.portal.web"
 
 else
-	if [ "$ADMIN_USESR" != "admin" ]; then
+	if [ "$ADMIN_USER" != "admin" ]; then
       		dir = "PaaSXpertPortal"
                 dir_sub = "paasxpert.portal.web"
 
