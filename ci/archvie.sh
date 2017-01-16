@@ -6,7 +6,7 @@ echo "archive.sh called"
 echo "ls version2-git"
 ls version2-git
 
-NEW_VERSION=$(cat version2-git/version)
+#NEW_VERSION=$(cat version2-git/version)
 echo "NEW_VERSION=$NEW_VERSION="
 
 if [$ADMIN_USER]; then

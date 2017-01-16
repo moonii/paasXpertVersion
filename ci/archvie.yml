@@ -3,7 +3,7 @@ platform: linux
 
 params:
   ADMIN_USER:
-  VERSION:
+  NEW_VERSION:
   PACKAGING:
 
 inputs:
