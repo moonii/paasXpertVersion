@@ -37,8 +37,13 @@ echo "========================================"
 cd  design-git/$dir/$dir_sub
 echo "pwd=$pwd="
 
-zip ../../archive-out/$dir_sub-v.$NEW_VERSION.zip ./* -r 
+
+file_name=$dir_sub-v.$NEW_VERSION.zip 
+zip $file_name ./* -r 
+ls -o $file_name
+
+cp $file_name ../../archive-out
 
 echo "ls ../../ archive-out==================="
-ls ../../archive-out
+ls -o ../../archive-out
 echo "======================================="
