@@ -4,7 +4,7 @@
 
 echo "archive.sh called"
 echo "ls -o ci3-git"
-ls -o ci3-git
+ls ci3-git
 
 echo "NEW_VERSION=$NEW_VERSION="
 
@@ -29,7 +29,9 @@ else
     	fi
 fi
 echo "dir/dir_sub=$dir/$dir_sub="
-cd  ci3-git/$(dir)/$(dir_sub)
+
+ls design-git
+cd  design-git/$(dir)/$(dir_sub)
 echo "pwd=$pwd="
 
 zip archive-out/$(dir_sub)-v.$(NEW_VERSION).zip ./* -r 
