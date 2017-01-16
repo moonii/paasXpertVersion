@@ -3,11 +3,15 @@
 #set -e
 
 echo "archive.sh called"
-echo "ls version2-git"
-ls version2-git
+echo "ls ci3-git"
+ls ci3-git
 
-#NEW_VERSION=$(cat version2-git/version)
 echo "NEW_VERSION=$NEW_VERSION="
+
+NEW_VERSION=$(cat ci3-git/version)
+
+echo "NEW_VERSION=$NEW_VERSION="
+echo "ADMIN_USESR=$ADMIN_USESR="
 
 if [$ADMIN_USER]; then
 	dir = "PaaSXpertPortal"
