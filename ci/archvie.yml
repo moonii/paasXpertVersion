@@ -1,5 +1,6 @@
 ---
 platform: linux
+image: docker:///samepagelabs/zip
 
 params:
   ADMIN_USER:
