@@ -30,8 +30,11 @@ else
 fi
 echo "dir/dir_sub=$dir/$dir_sub="
 
+echo "ls design-git =========================="
 ls design-git
-cd  design-git/$(dir)/$(dir_sub)
+echo "========================================"
+
+cd  design-git/$dir/$dir_sub
 echo "pwd=$pwd="
 
-zip archive-out/$(dir_sub)-v.$(NEW_VERSION).zip ./* -r 
+zip archive-out/$dir_sub-v.$NEW_VERSION.zip ./* -r 
