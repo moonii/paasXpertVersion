@@ -44,10 +44,10 @@ zip $file_name ./* -r
 echo "ls -o $file_name========================"
 ls -o $file_name
 
-cp $file_name ../../archive-out
+cp $file_name ../../../archive-out
 
-echo "ls ../../ archive-out==================="
-ls -o ../../archive-out
+echo "ls ../../../archive-out==================="
+ls -o ../../../archive-out
 echo "======================================="
 
 echo "ping api.bosh-lite.com"
