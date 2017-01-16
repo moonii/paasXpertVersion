@@ -3,12 +3,12 @@
 #set -e
 
 echo "archive.sh called"
-echo "ls -o ci3-git"
-ls ci3-git
+echo "ls -o ci-git"
+ls ci-git
 
 echo "NEW_VERSION=$NEW_VERSION="
 
-NEW_VERSION=$(cat ci3-git/version)
+NEW_VERSION=$(cat ci-git/version)
 
 echo "NEW_VERSION=$NEW_VERSION="
 echo "ADMIN_USER=$ADMIN_USER="

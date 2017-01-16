@@ -9,10 +9,10 @@ params:
 
 inputs:
   #- name: reserved-job-git
-  - name: ci3-git
+  - name: ci-git
   - name: design-git
 outputs:
   - name: archive-out
 
 run:
-  path: ci3-git/ci/archvie.sh
+  path: ci-git/ci/archvie.sh
