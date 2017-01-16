@@ -3,8 +3,8 @@
 #set -e
 
 echo "archive.sh called"
-echo "ls ci3-git"
-ls ci3-git
+echo "ls -o ci3-git"
+ls -o ci3-git
 
 echo "NEW_VERSION=$NEW_VERSION="
 
@@ -14,22 +14,22 @@ echo "NEW_VERSION=$NEW_VERSION="
 echo "ADMIN_USER=$ADMIN_USER="
 
 if [ $ADMIN_USER ]; then
-	dir = "PaaSXpertPortal"
+	dir="PaaSXpertPortal"
         dir_sub="paasxpert.portal.web"
 
 else
 	if [ "$ADMIN_USER" != "admin" ]; then
-      		dir = "PaaSXpertPortal"
-                dir_sub = "paasxpert.portal.web"
+      		dir="PaaSXpertPortal"
+                dir_sub="paasxpert.portal.web"
 
     	else
-      		dir = "PaaSXpertAdmin"
-                dir_sub"paasxpert.admin.web"
+      		dir="PaaSXpertAdmin"
+                dir_sub="paasxpert.admin.web"
 
     	fi
 fi
-echo "dir=$dir/$dir_sub"
+echo "dir/dir_sub=$dir/$dir_sub="
 cd  ci3-git/$(dir)/$(dir_sub)
-echo "pwd=$pwd"
+echo "pwd=$pwd="
 
 zip archive-out/$(dir_sub)-v.$(NEW_VERSION).zip ./* -r 
