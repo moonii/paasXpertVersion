@@ -49,11 +49,3 @@ cp $file_name ../../../archive-out
 echo "ls ../../../archive-out==================="
 ls -o ../../../archive-out
 echo "======================================="
-
-echo "ping api.bosh-lite.com"
-ping api.bosh-lite.com
-
-echo "sleep 5s"
-sleep 5s
-
-exit 1
