@@ -54,6 +54,6 @@ echo "ping api.bosh-lite.com"
 ping api.bosh-lite.com
 
 echo "sleep 5s"
-sleep 5
+sleep 5s
 
 exit 1
