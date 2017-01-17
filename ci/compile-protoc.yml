@@ -1,0 +1,17 @@
+---
+platform: linux
+image: docker:///mhlee/maven#protoc
+
+params:
+  POM_PATH:
+
+inputs:
+  - name: reserved-job-git
+  #- name: ci-git
+  - name: source-git
+outputs:
+  - name: pkg-out
+
+run:
+  path: reserved-job-git/java-mvn/mvn-exe.sh
+  args: ["protoc","package","true"]
