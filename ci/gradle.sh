@@ -11,9 +11,9 @@ cd source-git
 ./gradlew assemble
 
 
-cp build/* compile-out
+cp build/* ../compile-out
 
-cp build/lib/* pkg-out
+cp build/lib/* ../pkg-out
 
 echo "ls ../compile-out=========================="
 ls -o ../compile-out
