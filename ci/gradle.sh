@@ -11,7 +11,7 @@ cd source-git
 ./gradlew assemble
 
 
-cp build/classes/* ../compile-out
+cp -r build/classes/* ../compile-out
 
 cp build/libs/* ../pkg-out
 
