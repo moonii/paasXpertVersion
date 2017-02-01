@@ -14,7 +14,8 @@ echo "NEW_VERSION=$NEW_VERSION="
 echo "ADMIN_USER=$ADMIN_USER="
 echo "OUT_DIR=$OUT_DIR="
 
-if [ $ADMIN_USER ]; then
+if [ ! $ADMIN_USER ]; then
+	echo "if then [ $ADMIN_USER ]"
 	dir="PaaSXpertPortal"
         dir_sub="paasxpert.portal.web"
 
