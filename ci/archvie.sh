@@ -12,6 +12,7 @@ NEW_VERSION=$(cat ci-git/version)
 
 echo "NEW_VERSION=$NEW_VERSION="
 echo "ADMIN_USER=$ADMIN_USER="
+echo "OUT_DIR=$OUT_DIR="
 
 if [ $ADMIN_USER ]; then
 	dir="PaaSXpertPortal"
@@ -44,8 +45,8 @@ zip $file_name ./* -r
 echo "ls -o $file_name========================"
 ls -o $file_name
 
-cp $file_name ../../../archive-out
+cp $file_name ../../../$OUT_DIR	#archive-out
 
 echo "ls ../../../archive-out==================="
-ls -o ../../../archive-out
+ls -o ../../../$OUT_DIR		#archive-out
 echo "======================================="

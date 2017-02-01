@@ -5,7 +5,7 @@ image: docker:///samepagelabs/zip
 params:
   ADMIN_USER:
   NEW_VERSION:
-  PACKAGING:
+  OUT_DIR:
 
 inputs:
   #- name: reserved-job-git
