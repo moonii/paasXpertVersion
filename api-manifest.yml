@@ -5,9 +5,9 @@ applications:
   instances: 1
   path: ../target/portal.api-1.0.jar
   buildpack: java_buildpack
-  services:
-   - portal-api-db
-   - portal-api-redis
+#  services:
+#   - portal-api-db
+#   - portal-api-redis
 #  env:
 #   korea_z1.cf_admin_email: admin
 #   korea_z1.cf_admin_password: admin
