@@ -5,10 +5,10 @@
 echo "mapping.sh called"
 
 echo "ls -o ci-git"
-ls ci-git
+ls -l ci-git
 
 
-echo "ls -o ci-repo==================="
-ls -o ci-repo
+echo "ls -l ci-repo==================="
+ls -l ci-repo
 echo "======================================="
 
