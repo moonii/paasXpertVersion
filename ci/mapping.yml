@@ -1,0 +1,13 @@
+---
+platform: linux
+#image: docker:///samepagelabs/zip
+
+inputs:
+  #- name: reserved-job-git
+  - name: ci-git
+  - name: ci-repo
+outputs:
+  - name: mapping-out
+
+run:
+  path: ci-git/ci/mapping.sh
