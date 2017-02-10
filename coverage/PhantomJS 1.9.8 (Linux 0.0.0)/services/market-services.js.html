@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for services/market-services.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../index.html">all files</a> / <a href="index.html">services/</a> market-services.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">16.13% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>5/31</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/0</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/13</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">16.13% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>5/31</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">'use strict';
+&nbsp;
+var appItemServices = angular.module('appItem.services', ['common.services']);
+&nbsp;
+appItemServices.factory('appItemServices', <span class="fstat-no" title="function not covered" >function ($http, cache, cloudfoundry) {</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    var appItemServices = {};</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    appItemServices.listAllAppItems = <span class="fstat-no" title="function not covered" >function() {</span></span>
+<span class="cstat-no" title="statement not covered" >        return cloudfoundry.retrieveResource(cloudfoundry.resourcePromise(serverUrl + context + apiVersion + '/appMarkets/appItem/all', 'GET'));</span>
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    appItemServices.listAppItems = <span class="fstat-no" title="function not covered" >function(size, page, category, name) {</span></span>
+<span class="cstat-no" title="statement not covered" >        return cloudfoundry.retrieveResource(cloudfoundry.resourcePromise(serverUrl + context + apiVersion + '/appMarkets?size='+size+'&amp;page='+page+'&amp;category='+category+'&amp;name='+name, 'GET'));</span>
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    appItemServices.listAppItemsByState = <span class="fstat-no" title="function not covered" >function(size, page, category, state) {</span></span>
+<span class="cstat-no" title="statement not covered" >        return cloudfoundry.retrieveResource(cloudfoundry.resourcePromise(serverUrl + context + apiVersion + '/appMarkets/state?size='+size+'&amp;page='+page+'&amp;category='+category+'&amp;state='+state, 'GET'));</span>
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    appItemServices.listAppItemsByOwner = <span class="fstat-no" title="function not covered" >function(size, page, category, owner) {</span></span>
+<span class="cstat-no" title="statement not covered" >        return cloudfoundry.retrieveResource(cloudfoundry.resourcePromise(serverUrl + context + apiVersion + '/appMarkets/owner?size='+size+'&amp;page='+page+'&amp;category='+category+'&amp;owner='+owner, 'GET'));</span>
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    appItemServices.getAppItem = <span class="fstat-no" title="function not covered" >function(guid) {</span></span>
+<span class="cstat-no" title="statement not covered" >        return cloudfoundry.retrieveResource(cloudfoundry.resourcePromise(serverUrl + context + apiVersion + '/appMarkets/appItem/' + guid, 'GET'));</span>
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    appItemServices.getAppItemDownloadUserByAppItemGuid = <span class="fstat-no" title="function not covered" >function(guid) {</span></span>
+<span class="cstat-no" title="statement not covered" >        return cloudfoundry.retrieveResource(cloudfoundry.resourcePromise(serverUrl + context + apiVersion + '/appMarkets/downapps/appItem/' + guid, 'GET'));</span>
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    return appItemServices;</span>
+});
+&nbsp;
+'use strict';
+&nbsp;
+var appItemTempServices = angular.module('appItemTemp.services', ['common.services']);
+&nbsp;
+appItemTempServices.factory('appItemTempServices', <span class="fstat-no" title="function not covered" >function ($http, cache, cloudfoundry) {</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    var appItemTempServices = {};</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    appItemTempServices.listAllAppItemTemps = <span class="fstat-no" title="function not covered" >function() {</span></span>
+<span class="cstat-no" title="statement not covered" >        return cloudfoundry.retrieveResource(cloudfoundry.resourcePromise(serverUrl + context + apiVersion + '/appMarkets/appItemTemp/all', 'GET'));</span>
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    appItemTempServices.listAppItemTemps = <span class="fstat-no" title="function not covered" >function(size, page, category, name) {</span></span>
+<span class="cstat-no" title="statement not covered" >        return cloudfoundry.retrieveResource(cloudfoundry.resourcePromise(serverUrl + context + apiVersion + '/appMarkets/appitemtemps?size='+size+'&amp;page='+page+'&amp;category='+category+'&amp;name='+name, 'GET'));</span>
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    appItemTempServices.listAppItemTempsByState = <span class="fstat-no" title="function not covered" >function(size, page, category, state) {</span></span>
+<span class="cstat-no" title="statement not covered" >        return cloudfoundry.retrieveResource(cloudfoundry.resourcePromise(serverUrl + context + apiVersion + '/appMarkets/appitemtemps/state?size='+size+'&amp;page='+page+'&amp;category='+category+'&amp;state='+state, 'GET'));</span>
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    appItemTempServices.listAppItemTempsByOwner = <span class="fstat-no" title="function not covered" >function(size, page, category, owner) {</span></span>
+<span class="cstat-no" title="statement not covered" >        return cloudfoundry.retrieveResource(cloudfoundry.resourcePromise(serverUrl + context + apiVersion + '/appMarkets/appitemtemps/owner?size='+size+'&amp;page='+page+'&amp;category='+category+'&amp;owner='+owner, 'GET'));</span>
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    appItemTempServices.getAppItemTempByGuid = <span class="fstat-no" title="function not covered" >function(guid) {</span></span>
+<span class="cstat-no" title="statement not covered" >        return cloudfoundry.retrieveResource(cloudfoundry.resourcePromise(serverUrl + context + apiVersion + '/appMarkets/appitemtemps/' + guid, 'GET'));</span>
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    return appItemTempServices;</span>
+});</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Fri Feb 10 2017 07:14:31 GMT+0000 (UTC)
+</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>

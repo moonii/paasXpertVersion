@@ -1,0 +1,1328 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for controllers/cell-controllers.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../index.html">all files</a> / <a href="index.html">controllers/</a> cell-controllers.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0.71% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>2/282</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/60</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/70</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0.71% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>2/282</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260
+261
+262
+263
+264
+265
+266
+267
+268
+269
+270
+271
+272
+273
+274
+275
+276
+277
+278
+279
+280
+281
+282
+283
+284
+285
+286
+287
+288
+289
+290
+291
+292
+293
+294
+295
+296
+297
+298
+299
+300
+301
+302
+303
+304
+305
+306
+307
+308
+309
+310
+311
+312
+313
+314
+315
+316
+317
+318
+319
+320
+321
+322
+323
+324
+325
+326
+327
+328
+329
+330
+331
+332
+333
+334
+335
+336
+337
+338
+339
+340
+341
+342
+343
+344
+345
+346
+347
+348
+349
+350
+351
+352
+353
+354
+355
+356
+357
+358
+359
+360
+361
+362
+363
+364
+365
+366
+367
+368
+369
+370
+371
+372
+373
+374
+375
+376
+377
+378
+379
+380
+381
+382
+383
+384
+385
+386
+387
+388
+389
+390
+391
+392
+393
+394
+395
+396
+397
+398
+399
+400
+401
+402
+403
+404
+405
+406
+407
+408
+409
+410
+411
+412
+413
+414
+415
+416
+417
+418
+419
+420
+421
+422</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">'use strict';
+&nbsp;
+var cellControllers = angular.module('cell.controllers', []);
+&nbsp;
+cellControllers.controller('CellGroupsManageController', <span class="fstat-no" title="function not covered" >function ($rootScope, $scope, $timeout, cloudfoundry, cellServices, commonUtil, $translate) {</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    $scope.titles = commonUtil.getTitleLinks();</span>
+<span class="cstat-no" title="statement not covered" >    $scope.adminTitles = commonUtil.getAdminTitles();</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    var currentPage = 1;</span>
+<span class="cstat-no" title="statement not covered" >    var itemsPerPage = 10;</span>
+<span class="cstat-no" title="statement not covered" >    var placementGroups = [];</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    $scope.getList = <span class="fstat-no" title="function not covered" >function (obj) {</span></span>
+<span class="cstat-no" title="statement not covered" >        var condition = '';</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        if(obj == undefined) {</span>
+<span class="cstat-no" title="statement not covered" >            obj = {"currentPage":$scope.currentPage, "itemsPerPage":$scope.itemsPerPage};</span>
+        }
+<span class="cstat-no" title="statement not covered" >        var requestPage = obj.currentPage-1;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        if(($scope.searchField == undefined || $scope.searchField == '') &amp;&amp; jQuery('#searchText').text() != '' &amp;&amp; jQuery('#searchText').text().trim() != $translate.instant('cell_group_name_search')) {</span>
+<span class="cstat-no" title="statement not covered" >            cloudfoundry.alert($translate.instant('mi_search_predictive_func'));</span>
+<span class="cstat-no" title="statement not covered" >            return;</span>
+        }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        if($scope.searchField != undefined &amp;&amp; (typeof $scope.searchField == 'object' &amp;&amp; $scope.searchField.length &gt; 0)) {</span>
+<span class="cstat-no" title="statement not covered" >            $scope.currentPage = 1;</span>
+<span class="cstat-no" title="statement not covered" >            obj.currentPage = 1;</span>
+<span class="cstat-no" title="statement not covered" >            requestPage = 0;</span>
+<span class="cstat-no" title="statement not covered" >            condition = "name:" + $scope.searchField[0].name;</span>
+        }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        $rootScope.loading = true;</span>
+<span class="cstat-no" title="statement not covered" >        var cellPromise = cellServices.listPlacementGroups(obj.itemsPerPage, requestPage, condition);</span>
+<span class="cstat-no" title="statement not covered" >        cellPromise.success(<span class="fstat-no" title="function not covered" >function (data) {</span></span>
+<span class="cstat-no" title="statement not covered" >            $rootScope.loading = false;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            $scope.totalItems = data.totalElements;</span>
+<span class="cstat-no" title="statement not covered" >            $scope.currentPage = obj.currentPage;</span>
+<span class="cstat-no" title="statement not covered" >            $scope.itemsPerPage = obj.itemsPerPage;</span>
+<span class="cstat-no" title="statement not covered" >            $scope.totalPages = Math.ceil(data.totalElements / obj.itemsPerPage);</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            $scope.placementGroups = data.content;</span>
+        });
+<span class="cstat-no" title="statement not covered" >        cellPromise.error(<span class="fstat-no" title="function not covered" >function (data) {</span></span>
+<span class="cstat-no" title="statement not covered" >            $rootScope.loading = false;</span>
+<span class="cstat-no" title="statement not covered" >            cloudfoundry.alert(data);</span>
+        });
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    $scope.getListNames = <span class="fstat-no" title="function not covered" >function () {</span></span>
+<span class="cstat-no" title="statement not covered" >        var cellPromise = cellServices.listAllPlacementGroups();</span>
+<span class="cstat-no" title="statement not covered" >        cellPromise.success(<span class="fstat-no" title="function not covered" >function(data) {</span></span>
+<span class="cstat-no" title="statement not covered" >            placementGroups = [];</span>
+<span class="cstat-no" title="statement not covered" >            angular.forEach(data, <span class="fstat-no" title="function not covered" >function(placementGroup) {</span></span>
+<span class="cstat-no" title="statement not covered" >                placementGroups.push({'name': placementGroup.name});</span>
+            });
+        })
+<span class="cstat-no" title="statement not covered" >        cellPromise.error(<span class="fstat-no" title="function not covered" >function (data) {</span></span>
+<span class="cstat-no" title="statement not covered" >            cloudfoundry.alert(data);</span>
+        });
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    var obj = {"currentPage": currentPage, "itemsPerPage": itemsPerPage, "condition": ""};</span>
+<span class="cstat-no" title="statement not covered" >    $scope.getListNames();</span>
+<span class="cstat-no" title="statement not covered" >    $scope.getList(obj);</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    $scope.getItems = <span class="fstat-no" title="function not covered" >function($query) {</span></span>
+<span class="cstat-no" title="statement not covered" >        return placementGroups.filter(<span class="fstat-no" title="function not covered" >function(placementGroup) {</span></span>
+<span class="cstat-no" title="statement not covered" >            return placementGroup.name.toLowerCase().indexOf($query.toLowerCase()) != -1;</span>
+        });
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    $scope.checkedPlacementGroups = <span class="fstat-no" title="function not covered" >function () {</span></span>
+<span class="cstat-no" title="statement not covered" >        $scope.placementGroups.forEach(<span class="fstat-no" title="function not covered" >function (placementGroup) {</span></span>
+<span class="cstat-no" title="statement not covered" >            placementGroup.checked = $scope.allCheck;</span>
+        })
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    $scope.countCheckedPlacementGroups = <span class="fstat-no" title="function not covered" >function () {</span></span>
+<span class="cstat-no" title="statement not covered" >        $scope.deleteMessage = '';</span>
+<span class="cstat-no" title="statement not covered" >        $scope.count = 0;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        if(!$scope.placementGroups) {</span>
+<span class="cstat-no" title="statement not covered" >            return;</span>
+        }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        var count = 0;</span>
+<span class="cstat-no" title="statement not covered" >        $scope.placementGroups.forEach(<span class="fstat-no" title="function not covered" >function (placementGroup) {</span></span>
+<span class="cstat-no" title="statement not covered" >            if(placementGroup.checked) {</span>
+<span class="cstat-no" title="statement not covered" >                count++;</span>
+            }
+        });
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        if(count != 0) {</span>
+<span class="cstat-no" title="statement not covered" >            $scope.deleteMessage = $translate.instant('mq_delete_cell_group_count');</span>
+<span class="cstat-no" title="statement not covered" >            $scope.count = count;</span>
+        }
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    $scope.detailPlacementGroup = <span class="fstat-no" title="function not covered" >function (placementGroup) {</span></span>
+<span class="cstat-no" title="statement not covered" >        $scope.resetData();</span>
+<span class="cstat-no" title="statement not covered" >        $rootScope.loadingDetail = true;</span>
+<span class="cstat-no" title="statement not covered" >        var cellPromise = cellServices.getPlacementGroup(placementGroup.guid);</span>
+<span class="cstat-no" title="statement not covered" >        cellPromise.success(<span class="fstat-no" title="function not covered" >function(data) {</span></span>
+<span class="cstat-no" title="statement not covered" >            $rootScope.loadingDetail = false;</span>
+<span class="cstat-no" title="statement not covered" >            $scope.detail = data;</span>
+        })
+<span class="cstat-no" title="statement not covered" >        cellPromise.error(<span class="fstat-no" title="function not covered" >function (data) {</span></span>
+<span class="cstat-no" title="statement not covered" >            $rootScope.loadingDetail = false;</span>
+<span class="cstat-no" title="statement not covered" >            cloudfoundry.alert(data);</span>
+        });
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    $scope.createPlacementGroup = <span class="fstat-no" title="function not covered" >function () {</span></span>
+<span class="cstat-no" title="statement not covered" >        if($scope.pgName == undefined || $scope.pgName == '') {</span>
+<span class="cstat-no" title="statement not covered" >            cloudfoundry.alert($translate.instant('mi_dont_input_cell_group_name'));</span>
+<span class="cstat-no" title="statement not covered" >            return;</span>
+        }
+<span class="cstat-no" title="statement not covered" >        if($scope.pgCellSelected == undefined || $scope.pgCellSelected == '') {</span>
+<span class="cstat-no" title="statement not covered" >            cloudfoundry.alert($translate.instant('mi_dont_select_cell'));</span>
+<span class="cstat-no" title="statement not covered" >            return;</span>
+        }
+<span class="cstat-no" title="statement not covered" >        var data = {};</span>
+<span class="cstat-no" title="statement not covered" >        data['name'] = $scope.pgName;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        $rootScope.rootLoading = true;</span>
+<span class="cstat-no" title="statement not covered" >        var cellPromise = cellServices.createPlacementGroup(data);</span>
+<span class="cstat-no" title="statement not covered" >        cellPromise.success(<span class="fstat-no" title="function not covered" >function (placementGroup) {</span></span>
+<span class="cstat-no" title="statement not covered" >            var cell = {};</span>
+<span class="cstat-no" title="statement not covered" >            cell['ip'] = $scope.pgCellSelected.ip;</span>
+<span class="cstat-no" title="statement not covered" >            cell['name'] = $scope.pgCellSelected.name;</span>
+<span class="cstat-no" title="statement not covered" >            cell['pgGuid'] = placementGroup;</span>
+<span class="cstat-no" title="statement not covered" >            var cellPromise = cellServices.createCell(cell);</span>
+<span class="cstat-no" title="statement not covered" >            cellPromise.success(<span class="fstat-no" title="function not covered" >function (data) {</span></span>
+<span class="cstat-no" title="statement not covered" >                $rootScope.rootLoading = false;</span>
+<span class="cstat-no" title="statement not covered" >                cloudfoundry.success($translate.instant('mi_add_cell_group'));</span>
+<span class="cstat-no" title="statement not covered" >                $scope.totalItems = $scope.totalItems + 1;</span>
+<span class="cstat-no" title="statement not covered" >                var totalPages = 0;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                if($scope.totalItems &gt; $scope.itemsPerPage)</span>
+<span class="cstat-no" title="statement not covered" >                    totalPages = Math.ceil($scope.totalItems/$scope.itemsPerPage);</span>
+                else
+<span class="cstat-no" title="statement not covered" >                    totalPages = 1;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                obj.currentPage = totalPages;</span>
+<span class="cstat-no" title="statement not covered" >                obj.itemsPerPage = $scope.itemsPerPage;</span>
+<span class="cstat-no" title="statement not covered" >                $scope.getListNames();</span>
+<span class="cstat-no" title="statement not covered" >                $scope.getList(obj);</span>
+<span class="cstat-no" title="statement not covered" >                $scope.getAllDiegoCells();</span>
+            });
+<span class="cstat-no" title="statement not covered" >            cellPromise.error(<span class="fstat-no" title="function not covered" >function (data) {</span></span>
+<span class="cstat-no" title="statement not covered" >                $rootScope.rootLoading = false;</span>
+<span class="cstat-no" title="statement not covered" >                cloudfoundry.alert(data);</span>
+            });
+        });
+<span class="cstat-no" title="statement not covered" >        cellPromise.error(<span class="fstat-no" title="function not covered" >function (data) {</span></span>
+<span class="cstat-no" title="statement not covered" >            cloudfoundry.alert(data);</span>
+        });
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    $scope.updatePlacementGroup = <span class="fstat-no" title="function not covered" >function () {</span></span>
+<span class="cstat-no" title="statement not covered" >        var data = {};</span>
+<span class="cstat-no" title="statement not covered" >        data['guid'] = $scope.detail.guid;</span>
+<span class="cstat-no" title="statement not covered" >        data['name'] = $scope.detail.name;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        $rootScope.rootLoading = true;</span>
+<span class="cstat-no" title="statement not covered" >        var cellPromise = cellServices.updatePlacementGroup(data);</span>
+<span class="cstat-no" title="statement not covered" >        cellPromise.success(<span class="fstat-no" title="function not covered" >function () {</span></span>
+<span class="cstat-no" title="statement not covered" >            cloudfoundry.success($translate.instant('mi_edit_cell_group'));</span>
+<span class="cstat-no" title="statement not covered" >            $rootScope.rootLoading = false;</span>
+<span class="cstat-no" title="statement not covered" >            var obj = {"currentPage": currentPage, "itemsPerPage": itemsPerPage, "condition": ""};</span>
+<span class="cstat-no" title="statement not covered" >            $scope.getList(obj);</span>
+        });
+<span class="cstat-no" title="statement not covered" >        cellPromise.error(<span class="fstat-no" title="function not covered" >function (data) {</span></span>
+<span class="cstat-no" title="statement not covered" >            $rootScope.rootLoading = false;</span>
+<span class="cstat-no" title="statement not covered" >            cloudfoundry.alert(data);</span>
+        });
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    $scope.deletePlacementGroups = <span class="fstat-no" title="function not covered" >function () {</span></span>
+<span class="cstat-no" title="statement not covered" >        $rootScope.rootLoading = true;</span>
+<span class="cstat-no" title="statement not covered" >        var cellPromise = cellServices.getCellSummaryByPlacementGroup();</span>
+<span class="cstat-no" title="statement not covered" >        cellPromise.success(<span class="fstat-no" title="function not covered" >function(data) {</span></span>
+<span class="cstat-no" title="statement not covered" >            $scope.placementGroups.forEach(<span class="fstat-no" title="function not covered" >function (placementGroup) {</span></span>
+<span class="cstat-no" title="statement not covered" >                if(placementGroup.checked) {</span>
+<span class="cstat-no" title="statement not covered" >                    var appCheck = false;</span>
+<span class="cstat-no" title="statement not covered" >                    angular.forEach(data, <span class="fstat-no" title="function not covered" >function(placementGroupSummary) {</span></span>
+<span class="cstat-no" title="statement not covered" >                        if(angular.equals(placementGroupSummary.pgName, placementGroup.name)</span>
+                            &amp;&amp; angular.equals(placementGroupSummary.startedAppUsage,0) &amp;&amp; angular.equals(placementGroupSummary.stoppedAppUsage,0)) {
+<span class="cstat-no" title="statement not covered" >                            appCheck = true;</span>
+<span class="cstat-no" title="statement not covered" >                            var cellPromise = cellServices.deletePlacementGroup(placementGroup.guid);</span>
+<span class="cstat-no" title="statement not covered" >                            cellPromise.success(<span class="fstat-no" title="function not covered" >function () {</span></span>
+<span class="cstat-no" title="statement not covered" >                                $rootScope.rootLoading = false;</span>
+<span class="cstat-no" title="statement not covered" >                                $scope.totalItems = $scope.totalItems - 1;</span>
+<span class="cstat-no" title="statement not covered" >                                var totalPages = 0;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                                if($scope.totalItems &gt; $scope.itemsPerPage)</span>
+<span class="cstat-no" title="statement not covered" >                                    totalPages = Math.ceil($scope.totalItems/$scope.itemsPerPage);</span>
+                                else
+<span class="cstat-no" title="statement not covered" >                                    totalPages = 1;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                                if($scope.currentPage &gt; totalPages)</span>
+<span class="cstat-no" title="statement not covered" >                                    obj.currentPage = $scope.currentPage - 1;</span>
+                                else
+<span class="cstat-no" title="statement not covered" >                                    obj.currentPage = $scope.currentPage;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                                obj.itemsPerPage = $scope.itemsPerPage;</span>
+<span class="cstat-no" title="statement not covered" >                                $scope.getList(obj);</span>
+<span class="cstat-no" title="statement not covered" >                                $scope.getListNames();</span>
+<span class="cstat-no" title="statement not covered" >                                $scope.getAllDiegoCells();</span>
+<span class="cstat-no" title="statement not covered" >                                cloudfoundry.success($translate.instant('mi_delete_cell_group'));</span>
+                            });
+<span class="cstat-no" title="statement not covered" >                            cellPromise.error(<span class="fstat-no" title="function not covered" >function (data) {</span></span>
+<span class="cstat-no" title="statement not covered" >                                cloudfoundry.alert(data);</span>
+                            });
+                        }
+                    });
+<span class="cstat-no" title="statement not covered" >                    if(!appCheck)</span>
+<span class="cstat-no" title="statement not covered" >                        cloudfoundry.alert($translate.instant('mi_cant_delete_exist_app_in_cell_group'));</span>
+                }
+            })
+        })
+<span class="cstat-no" title="statement not covered" >        cellPromise.error(<span class="fstat-no" title="function not covered" >function (data) {</span></span>
+<span class="cstat-no" title="statement not covered" >            cloudfoundry.alert(data);</span>
+        });
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    $scope.deleteCellMessage = <span class="fstat-no" title="function not covered" >function () {</span></span>
+<span class="cstat-no" title="statement not covered" >        $scope.message = $translate.instant('mq_delete_cell');</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        if($scope.detail.cells.length == 1)</span>
+<span class="cstat-no" title="statement not covered" >            $scope.message = $translate.instant('mi_cant_delete_cell_must_one_more_cell');</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        if($scope.detail.cells.length != 1)</span>
+<span class="cstat-no" title="statement not covered" >            $scope.cellCheck = true;</span>
+        else
+<span class="cstat-no" title="statement not covered" >            $scope.cellCheck = false;</span>
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    var diegoCells = [];</span>
+<span class="cstat-no" title="statement not covered" >    $scope.getDiegoCells = <span class="fstat-no" title="function not covered" >function () {</span></span>
+<span class="cstat-no" title="statement not covered" >        var usedCells = [];</span>
+<span class="cstat-no" title="statement not covered" >        var availableCells = [];</span>
+<span class="cstat-no" title="statement not covered" >        var cellPromise = cellServices.listAllDiegoCells();</span>
+<span class="cstat-no" title="statement not covered" >        cellPromise.success(<span class="fstat-no" title="function not covered" >function (data) {</span></span>
+<span class="cstat-no" title="statement not covered" >            diegoCells = data;</span>
+<span class="cstat-no" title="statement not covered" >            var cellPromise = cellServices.listAllCells();</span>
+<span class="cstat-no" title="statement not covered" >            cellPromise.success(<span class="fstat-no" title="function not covered" >function (cells) {</span></span>
+<span class="cstat-no" title="statement not covered" >                angular.forEach(data, <span class="fstat-no" title="function not covered" >function (diegoCell) {</span></span>
+<span class="cstat-no" title="statement not covered" >                    var usageCheck = false;</span>
+<span class="cstat-no" title="statement not covered" >                    angular.forEach(cells, <span class="fstat-no" title="function not covered" >function (cell) {</span></span>
+<span class="cstat-no" title="statement not covered" >                        if(angular.equals(diegoCell.name, cell.name)) {</span>
+<span class="cstat-no" title="statement not covered" >                            usageCheck = true;</span>
+<span class="cstat-no" title="statement not covered" >                            usedCells.push(diegoCell);</span>
+                        }
+                    });
+<span class="cstat-no" title="statement not covered" >                    if(!usageCheck)</span>
+<span class="cstat-no" title="statement not covered" >                        availableCells.push(diegoCell);</span>
+                });
+<span class="cstat-no" title="statement not covered" >                $scope.usedCells = usedCells;</span>
+<span class="cstat-no" title="statement not covered" >                $scope.availableCells = availableCells;</span>
+            });
+<span class="cstat-no" title="statement not covered" >            cellPromise.error(<span class="fstat-no" title="function not covered" >function (data) {</span></span>
+<span class="cstat-no" title="statement not covered" >                cloudfoundry.alert(data);</span>
+            });
+        });
+<span class="cstat-no" title="statement not covered" >        cellPromise.error(<span class="fstat-no" title="function not covered" >function (data) {</span></span>
+<span class="cstat-no" title="statement not covered" >            cloudfoundry.alert(data);</span>
+        });
+    }
+<span class="cstat-no" title="statement not covered" >    $scope.getDiegoCells();</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    $scope.getAllDiegoCells = <span class="fstat-no" title="function not covered" >function () {</span></span>
+<span class="cstat-no" title="statement not covered" >        var usedCells = [];</span>
+<span class="cstat-no" title="statement not covered" >        var availableCells = [];</span>
+<span class="cstat-no" title="statement not covered" >        var cellPromise = cellServices.listAllCells();</span>
+<span class="cstat-no" title="statement not covered" >        cellPromise.success(<span class="fstat-no" title="function not covered" >function (cells) {</span></span>
+<span class="cstat-no" title="statement not covered" >            angular.forEach(diegoCells, <span class="fstat-no" title="function not covered" >function (diegoCell) {</span></span>
+<span class="cstat-no" title="statement not covered" >                var usageCheck = false;</span>
+<span class="cstat-no" title="statement not covered" >                angular.forEach(cells, <span class="fstat-no" title="function not covered" >function (cell) {</span></span>
+<span class="cstat-no" title="statement not covered" >                    if(angular.equals(diegoCell.name, cell.name)) {</span>
+<span class="cstat-no" title="statement not covered" >                        usageCheck = true;</span>
+<span class="cstat-no" title="statement not covered" >                        usedCells.push(diegoCell);</span>
+                    }
+                });
+<span class="cstat-no" title="statement not covered" >                if(!usageCheck)</span>
+<span class="cstat-no" title="statement not covered" >                    availableCells.push(diegoCell);</span>
+            });
+<span class="cstat-no" title="statement not covered" >            $scope.usedCells = usedCells;</span>
+<span class="cstat-no" title="statement not covered" >            $scope.availableCells = availableCells;</span>
+        });
+<span class="cstat-no" title="statement not covered" >        cellPromise.error(<span class="fstat-no" title="function not covered" >function (data) {</span></span>
+<span class="cstat-no" title="statement not covered" >            cloudfoundry.alert(data);</span>
+        });
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    $scope.getAllCells = <span class="fstat-no" title="function not covered" >function () {</span></span>
+<span class="cstat-no" title="statement not covered" >        var cellPromise = cellServices.listAllCells();</span>
+<span class="cstat-no" title="statement not covered" >        cellPromise.success(<span class="fstat-no" title="function not covered" >function (data) {</span></span>
+<span class="cstat-no" title="statement not covered" >            $scope.allCells = data;</span>
+        });
+<span class="cstat-no" title="statement not covered" >        cellPromise.error(<span class="fstat-no" title="function not covered" >function (data) {</span></span>
+<span class="cstat-no" title="statement not covered" >            cloudfoundry.alert(data);</span>
+        });
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    $scope.getCellById = <span class="fstat-no" title="function not covered" >function(cell) {</span></span>
+<span class="cstat-no" title="statement not covered" >        var cellPromise = cellServices.getCellById(cell.id);</span>
+<span class="cstat-no" title="statement not covered" >        cellPromise.success(<span class="fstat-no" title="function not covered" >function (data) {</span></span>
+<span class="cstat-no" title="statement not covered" >            $scope.cell = data;</span>
+        });
+<span class="cstat-no" title="statement not covered" >        cellPromise.error(<span class="fstat-no" title="function not covered" >function (data) {</span></span>
+<span class="cstat-no" title="statement not covered" >            cloudfoundry.alert(data);</span>
+        });
+    };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    $scope.createCell = <span class="fstat-no" title="function not covered" >function(cell, guid) {</span></span>
+<span class="cstat-no" title="statement not covered" >        if($scope.cellSelected == undefined || $scope.cellSelected == '') {</span>
+<span class="cstat-no" title="statement not covered" >            cloudfoundry.alert($translate.instant('mi_dont_select_cell'));</span>
+<span class="cstat-no" title="statement not covered" >            return;</span>
+        }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        var data = {};</span>
+<span class="cstat-no" title="statement not covered" >        data['ip'] = cell.ip;</span>
+<span class="cstat-no" title="statement not covered" >        data['name'] = cell.name;</span>
+<span class="cstat-no" title="statement not covered" >        data['pgGuid'] = guid;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        $rootScope.rootLoading = true;</span>
+<span class="cstat-no" title="statement not covered" >        var cellPromise = cellServices.createCell(data);</span>
+<span class="cstat-no" title="statement not covered" >        cellPromise.success(<span class="fstat-no" title="function not covered" >function (data) {</span></span>
+<span class="cstat-no" title="statement not covered" >            var cellPromise = cellServices.getPlacementGroup(guid);</span>
+<span class="cstat-no" title="statement not covered" >            cellPromise.success(<span class="fstat-no" title="function not covered" >function (data) {</span></span>
+<span class="cstat-no" title="statement not covered" >                $rootScope.rootLoading = false;</span>
+<span class="cstat-no" title="statement not covered" >                $scope.detail = data;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                cloudfoundry.success($translate.instant('mi_add_cell'));</span>
+<span class="cstat-no" title="statement not covered" >                $scope.getList(obj);</span>
+<span class="cstat-no" title="statement not covered" >                $scope.getAllDiegoCells();</span>
+<span class="cstat-no" title="statement not covered" >                $scope.resetCellForm();</span>
+            });
+<span class="cstat-no" title="statement not covered" >            cellPromise.error(<span class="fstat-no" title="function not covered" >function (data) {</span></span>
+<span class="cstat-no" title="statement not covered" >                $rootScope.rootLoading = false;</span>
+<span class="cstat-no" title="statement not covered" >                cloudfoundry.alert(data);</span>
+            });
+        });
+<span class="cstat-no" title="statement not covered" >        cellPromise.error(<span class="fstat-no" title="function not covered" >function (data) {</span></span>
+<span class="cstat-no" title="statement not covered" >            $rootScope.rootLoading = false;</span>
+<span class="cstat-no" title="statement not covered" >            cloudfoundry.alert(data);</span>
+        });
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    $scope.selectCell = <span class="fstat-no" title="function not covered" >function() {</span></span>
+<span class="cstat-no" title="statement not covered" >        var selected = $scope.cellSelected;</span>
+<span class="cstat-no" title="statement not covered" >        console.log($scope.cellSelected)</span>
+<span class="cstat-no" title="statement not covered" >        $scope.cellSelected = JSON.parse(selected);</span>
+<span class="cstat-no" title="statement not covered" >        console.log($scope.cellSelected)</span>
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    $scope.selectPlacementGroupCell = <span class="fstat-no" title="function not covered" >function() {</span></span>
+<span class="cstat-no" title="statement not covered" >        var placementGroupCell = $scope.pgCellSelected;</span>
+<span class="cstat-no" title="statement not covered" >        $scope.pgCellSelected = JSON.parse(placementGroupCell);</span>
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    $scope.chooseCell = <span class="fstat-no" title="function not covered" >function(cell) {</span></span>
+<span class="cstat-no" title="statement not covered" >        $scope.cellDeleted = cell;</span>
+<span class="cstat-no" title="statement not covered" >        var cellPromise = cellServices.listAllDiegoCells();</span>
+<span class="cstat-no" title="statement not covered" >        cellPromise.success(<span class="fstat-no" title="function not covered" >function (data) {</span></span>
+<span class="cstat-no" title="statement not covered" >            angular.forEach(data, <span class="fstat-no" title="function not covered" >function (diegoCell) {</span></span>
+<span class="cstat-no" title="statement not covered" >                if(diegoCell.ip == cell.ip) {</span>
+<span class="cstat-no" title="statement not covered" >                    $scope.usedMemory = diegoCell.totalMemory - diegoCell.availableMemory;</span>
+<span class="cstat-no" title="statement not covered" >                    $scope.usedDisk = diegoCell.totalDisk - diegoCell.availableDisk;</span>
+<span class="cstat-no" title="statement not covered" >                    $scope.usedContainers = diegoCell.totalContainers - diegoCell.availableContainers;</span>
+                }
+            });
+        });
+<span class="cstat-no" title="statement not covered" >        cellPromise.error(<span class="fstat-no" title="function not covered" >function (data) {</span></span>
+&nbsp;
+        });
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    $scope.deleteCell = <span class="fstat-no" title="function not covered" >function (cell) {</span></span>
+<span class="cstat-no" title="statement not covered" >        $rootScope.rootLoading = true;</span>
+<span class="cstat-no" title="statement not covered" >        var cellPromise = cellServices.getCellById(cell.name);</span>
+<span class="cstat-no" title="statement not covered" >        cellPromise.success(<span class="fstat-no" title="function not covered" >function (data) {</span></span>
+<span class="cstat-no" title="statement not covered" >            var cellPromise = cellServices.deleteCell(data.guid);</span>
+<span class="cstat-no" title="statement not covered" >            cellPromise.success(<span class="fstat-no" title="function not covered" >function () {</span></span>
+<span class="cstat-no" title="statement not covered" >                var cellPromise = cellServices.getPlacementGroup($scope.detail.guid);</span>
+<span class="cstat-no" title="statement not covered" >                cellPromise.success(<span class="fstat-no" title="function not covered" >function (data) {</span></span>
+<span class="cstat-no" title="statement not covered" >                    $rootScope.rootLoading = false;</span>
+<span class="cstat-no" title="statement not covered" >                    $scope.detail = data;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                    cloudfoundry.success($translate.instant('mi_delete_cell'));</span>
+<span class="cstat-no" title="statement not covered" >                    $scope.getList(obj);</span>
+<span class="cstat-no" title="statement not covered" >                    $scope.getAllDiegoCells();</span>
+                });
+<span class="cstat-no" title="statement not covered" >                cellPromise.error(<span class="fstat-no" title="function not covered" >function (data) {</span></span>
+<span class="cstat-no" title="statement not covered" >                    $rootScope.rootLoading = false;</span>
+<span class="cstat-no" title="statement not covered" >                    cloudfoundry.alert(data);</span>
+                });
+            });
+<span class="cstat-no" title="statement not covered" >            cellPromise.error(<span class="fstat-no" title="function not covered" >function (data) {</span></span>
+<span class="cstat-no" title="statement not covered" >                $rootScope.rootLoading = false;</span>
+<span class="cstat-no" title="statement not covered" >                cloudfoundry.alert(data);</span>
+            });
+        });
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    $scope.resetForm = <span class="fstat-no" title="function not covered" >function () {</span></span>
+<span class="cstat-no" title="statement not covered" >        $scope.pgName = null;</span>
+<span class="cstat-no" title="statement not covered" >        $scope.pgCellSelected = null;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        $scope.addForm.pgName.$pristine = true;</span>
+<span class="cstat-no" title="statement not covered" >        $scope.addForm.pgName.$touched = false;</span>
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    $scope.resetData = <span class="fstat-no" title="function not covered" >function () {</span></span>
+<span class="cstat-no" title="statement not covered" >        $scope.detail = null;</span>
+<span class="cstat-no" title="statement not covered" >        $scope.cellSelected = null;</span>
+    }
+});</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Fri Feb 10 2017 07:14:31 GMT+0000 (UTC)
+</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>

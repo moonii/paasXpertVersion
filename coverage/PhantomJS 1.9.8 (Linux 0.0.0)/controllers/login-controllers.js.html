@@ -1,0 +1,968 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for controllers/login-controllers.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../index.html">all files</a> / <a href="index.html">controllers/</a> login-controllers.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">3.55% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>7/197</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/85</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/37</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">3.55% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>7/197</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260
+261
+262
+263
+264
+265
+266
+267
+268
+269
+270
+271
+272
+273
+274
+275
+276
+277
+278
+279
+280
+281
+282
+283
+284
+285
+286
+287
+288
+289
+290
+291
+292
+293
+294
+295
+296
+297
+298
+299
+300
+301
+302</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">'use strict';
+&nbsp;
+var loginControllers = angular.module('login.controllers', []);
+&nbsp;
+<span class="fstat-no" title="function not covered" >function validationEmail($scope, userServices, email, bool) {</span>
+<span class="cstat-no" title="statement not covered" >	if (!angular.isUndefined(email)) {</span>
+<span class="cstat-no" title="statement not covered" >		var validationPromise = userServices.fetchByEmail(email);</span>
+<span class="cstat-no" title="statement not covered" >		validationPromise.success(<span class="fstat-no" title="function not covered" >function (data, status, headers) {</span></span>
+<span class="cstat-no" title="statement not covered" >			$scope.emailError = bool;</span>
+<span class="cstat-no" title="statement not covered" >			if(angular.equals(data.roles[0],'ADMIN'))</span>
+<span class="cstat-no" title="statement not covered" >				$scope.adminError = bool;</span>
+			else
+<span class="cstat-no" title="statement not covered" >				$scope.adminError = !bool;</span>
+		});
+<span class="cstat-no" title="statement not covered" >		validationPromise.error(<span class="fstat-no" title="function not covered" >function (data, status, headers) {</span></span>
+<span class="cstat-no" title="statement not covered" >			$scope.emailError = !bool;</span>
+<span class="cstat-no" title="statement not covered" >			$scope.adminError = bool;</span>
+		});
+	}
+}
+&nbsp;
+<span class="fstat-no" title="function not covered" >function validateUser(cloudfoundry, $location) {</span>
+<span class="cstat-no" title="statement not covered" >	if (cloudfoundry.isAuthenticated()) {</span>
+<span class="cstat-no" title="statement not covered" >		$location.path(introduction);</span>
+	}
+}
+&nbsp;
+loginControllers.controller('LoginController', <span class="fstat-no" title="function not covered" >function ($scope, $http, $log, $location, ping, cache, cloudfoundry, loginService, regionServices, userServices, $translate, $window, $timeout, $cookies) {</span>
+<span class="cstat-no" title="statement not covered" >    ping();</span>
+<span class="cstat-no" title="statement not covered" >	validateUser(cloudfoundry, $location);</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >	var userAgent = $window.navigator.userAgent;</span>
+<span class="cstat-no" title="statement not covered" >	var browser;</span>
+<span class="cstat-no" title="statement not covered" >	var browsers = {chrome: /chrome/i, safari: /safari/i, firefox: /firefox/i, ie: /msie|rv/i};</span>
+<span class="cstat-no" title="statement not covered" >	for(var key in browsers) {</span>
+<span class="cstat-no" title="statement not covered" >		if (browsers[key].test(userAgent)) {</span>
+<span class="cstat-no" title="statement not covered" >			browser = key;</span>
+<span class="cstat-no" title="statement not covered" >			break;</span>
+		}
+	}
+<span class="cstat-no" title="statement not covered" >	if(browser == 'ie') {</span>
+<span class="cstat-no" title="statement not covered" >		if( (!userAgent.match(/rv:11.0/i)) &amp;&amp; ( (userAgent.match(/MSIE 10.0/i)) || (userAgent.match(/MSIE 9.0/i)) ) ) {</span>
+<span class="cstat-no" title="statement not covered" >			cloudfoundry.alert($translate.instant('mi_optimize_ie_11'));</span>
+		}
+	}
+&nbsp;
+<span class="cstat-no" title="statement not covered" >	if($location.search().status == '403') {</span>
+<span class="cstat-no" title="statement not covered" >		$timeout(<span class="fstat-no" title="function not covered" >function() {</span></span>
+<span class="cstat-no" title="statement not covered" >			$location.search({});</span>
+<span class="cstat-no" title="statement not covered" >			cache.clear();</span>
+<span class="cstat-no" title="statement not covered" >			cloudfoundry.alert($translate.instant('mi_invalid_session'));</span>
+		}, 10);
+	}
+<span class="cstat-no" title="statement not covered" >	if($location.search().status == '-1') {</span>
+<span class="cstat-no" title="statement not covered" >		$timeout(<span class="fstat-no" title="function not covered" >function() {</span></span>
+<span class="cstat-no" title="statement not covered" >			$location.search({});</span>
+<span class="cstat-no" title="statement not covered" >			cache.clear();</span>
+<span class="cstat-no" title="statement not covered" >			cloudfoundry.alert($translate.instant('mi_invalid_server'));</span>
+		}, 10);
+	}
+<span class="cstat-no" title="statement not covered" >	$location.search({});</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >	$scope.credentials = {</span>
+			username: '',
+			password: '',
+			rememberMe: false
+	};
+&nbsp;
+<span class="cstat-no" title="statement not covered" >	$scope.login = <span class="fstat-no" title="function not covered" >function () {</span></span>
+<span class="cstat-no" title="statement not covered" >		if ($scope.username == undefined || $scope.username == '') {</span>
+<span class="cstat-no" title="statement not covered" >			cloudfoundry.alert($translate.instant('mi_dont_input_id'));</span>
+<span class="cstat-no" title="statement not covered" >			return false;</span>
+		}
+<span class="cstat-no" title="statement not covered" >		if ($scope.password == undefined || $scope.password == '') {</span>
+<span class="cstat-no" title="statement not covered" >			cloudfoundry.alert($translate.instant('mi_dont_input_pwd'));</span>
+<span class="cstat-no" title="statement not covered" >			return false;</span>
+		}
+&nbsp;
+<span class="cstat-no" title="statement not covered" >		$scope.credentials.username = $scope.username;</span>
+<span class="cstat-no" title="statement not covered" >		$scope.credentials.password = $scope.password;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >		$scope.$root.rootLoading = true;</span>
+<span class="cstat-no" title="statement not covered" >		$http.get(serverUrl + '/api/core/ping')</span>
+			.success(<span class="fstat-no" title="function not covered" >function(){</span>
+<span class="cstat-no" title="statement not covered" >				var authenticationPromise = loginService.authenticate($scope.credentials);</span>
+<span class="cstat-no" title="statement not covered" >				authenticationPromise.success(<span class="fstat-no" title="function not covered" >function (data, status, headers) {</span></span>
+<span class="cstat-no" title="statement not covered" >					if(data.admin == false) {</span>
+<span class="cstat-no" title="statement not covered" >						$scope.$root.rootLoading = false;</span>
+<span class="cstat-no" title="statement not covered" >						cloudfoundry.alert($translate.instant('mi_no_admin_role'));</span>
+<span class="cstat-no" title="statement not covered" >						return;</span>
+					}
+					else {
+<span class="cstat-no" title="statement not covered" >						var regionPromise = regionServices.listAllRegions();</span>
+<span class="cstat-no" title="statement not covered" >						regionPromise.success(<span class="fstat-no" title="function not covered" >function (data) {</span></span>
+<span class="cstat-no" title="statement not covered" >							$scope.$root.rootLoading = false;</span>
+<span class="cstat-no" title="statement not covered" >							if(angular.equals(data.length, 0)) {</span>
+<span class="cstat-no" title="statement not covered" >								jQuery.fn.modalView('region_add');</span>
+							}
+							else
+<span class="cstat-no" title="statement not covered" >								$location.path('/dashboard');</span>
+						});
+<span class="cstat-no" title="statement not covered" >						regionPromise.error(<span class="fstat-no" title="function not covered" >function (data) {</span></span>
+<span class="cstat-no" title="statement not covered" >							$scope.$root.rootLoading = false;</span>
+<span class="cstat-no" title="statement not covered" >							cloudfoundry.alert(data);</span>
+						});
+					}
+				});
+<span class="cstat-no" title="statement not covered" >				authenticationPromise.error(<span class="fstat-no" title="function not covered" >function (data, status, headers) {</span></span>
+<span class="cstat-no" title="statement not covered" >					$scope.$root.rootLoading = false;</span>
+					// 로그인 failureHandler: SimpleUrlAuthenticationFailureHandler
+<span class="cstat-no" title="statement not covered" >					if(status == 401 &amp;&amp; data.message == 'Authentication Failed: Bad credentials') {</span>
+<span class="cstat-no" title="statement not covered" >						data = $translate.instant('mi_wrong_id_or_pwd');</span>
+					}
+<span class="cstat-no" title="statement not covered" >					cloudfoundry.alert(data);</span>
+				});
+			})
+			.error(<span class="fstat-no" title="function not covered" >function (data, status, headers, config) {</span>
+<span class="cstat-no" title="statement not covered" >				$scope.$root.rootLoading = false;</span>
+<span class="cstat-no" title="statement not covered" >				data.message = 'Could not ping server. Please try refreshing after sometime&lt;br&gt;' + data.message;</span>
+<span class="cstat-no" title="statement not covered" >				cloudfoundry.alert(data);</span>
+			});
+	};
+&nbsp;
+<span class="cstat-no" title="statement not covered" >	$scope.createRegion = <span class="fstat-no" title="function not covered" >function () {</span></span>
+<span class="cstat-no" title="statement not covered" >		if($scope.name == undefined || $scope.name == '') {</span>
+<span class="cstat-no" title="statement not covered" >			cloudfoundry.alert($translate.instant('mi_type_region_name'));</span>
+<span class="cstat-no" title="statement not covered" >			return;</span>
+		}
+<span class="cstat-no" title="statement not covered" >		if($scope.url == undefined || $scope.url == '') {</span>
+<span class="cstat-no" title="statement not covered" >			cloudfoundry.alert($translate.instant('mi_type_region_cc_url'));</span>
+<span class="cstat-no" title="statement not covered" >			return;</span>
+		}
+<span class="cstat-no" title="statement not covered" >		if($scope.uaaUrl == undefined || $scope.uaaUrl == '') {</span>
+<span class="cstat-no" title="statement not covered" >			cloudfoundry.alert($translate.instant('mi_type_region_uaa_url'));</span>
+<span class="cstat-no" title="statement not covered" >			return;</span>
+		}
+<span class="cstat-no" title="statement not covered" >		if($scope.clientId == undefined || $scope.clientId == '') {</span>
+<span class="cstat-no" title="statement not covered" >			cloudfoundry.alert($translate.instant('mi_type_region_client_id'));</span>
+<span class="cstat-no" title="statement not covered" >			return;</span>
+		}
+<span class="cstat-no" title="statement not covered" >		if($scope.clientSecret == undefined || $scope.clientSecret == '') {</span>
+<span class="cstat-no" title="statement not covered" >			cloudfoundry.alert($translate.instant('mi_type_region_client_secret'));</span>
+<span class="cstat-no" title="statement not covered" >			return;</span>
+		}
+<span class="cstat-no" title="statement not covered" >		if($scope.directorHost == undefined || $scope.directorHost == '') {</span>
+<span class="cstat-no" title="statement not covered" >			cloudfoundry.alert($translate.instant('mi_type_region_director_host'));</span>
+<span class="cstat-no" title="statement not covered" >			return;</span>
+		}
+<span class="cstat-no" title="statement not covered" >		if($scope.directorPort == undefined || $scope.directorPort == '') {</span>
+<span class="cstat-no" title="statement not covered" >			cloudfoundry.alert($translate.instant('mi_type_region_director_port'));</span>
+<span class="cstat-no" title="statement not covered" >			return;</span>
+		}
+<span class="cstat-no" title="statement not covered" >		if($scope.directorUserId == undefined || $scope.directorUserId == '') {</span>
+<span class="cstat-no" title="statement not covered" >			cloudfoundry.alert($translate.instant('mi_type_region_director_user_id'));</span>
+<span class="cstat-no" title="statement not covered" >			return;</span>
+		}
+<span class="cstat-no" title="statement not covered" >		if($scope.directorUserPassword == undefined || $scope.directorUserPassword == '') {</span>
+<span class="cstat-no" title="statement not covered" >			cloudfoundry.alert($translate.instant('mi_type_region_director_user_password'));</span>
+<span class="cstat-no" title="statement not covered" >			return;</span>
+		}
+&nbsp;
+<span class="cstat-no" title="statement not covered" >		var data = {};</span>
+<span class="cstat-no" title="statement not covered" >		data['name'] = $scope.name;</span>
+<span class="cstat-no" title="statement not covered" >		data['url'] = $scope.url;</span>
+<span class="cstat-no" title="statement not covered" >		data['uaaUrl'] = $scope.uaaUrl;</span>
+<span class="cstat-no" title="statement not covered" >		data['clientId'] = $scope.clientId;</span>
+<span class="cstat-no" title="statement not covered" >		data['clientSecret'] = $scope.clientSecret;</span>
+<span class="cstat-no" title="statement not covered" >		data['directorHost'] = $scope.directorHost;</span>
+<span class="cstat-no" title="statement not covered" >		data['directorPort'] = $scope.directorPort;</span>
+<span class="cstat-no" title="statement not covered" >		data['directorUserId'] = $scope.directorUserId;</span>
+<span class="cstat-no" title="statement not covered" >		data['directorUserPassword'] = $scope.directorUserPassword;</span>
+<span class="cstat-no" title="statement not covered" >		data['description'] = $scope.description;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >		$scope.$root.rootLoading = true;</span>
+<span class="cstat-no" title="statement not covered" >		var regionPromise = regionServices.createRegionAndSudouserAndReservedOrg(cache.getUser().id, data);</span>
+<span class="cstat-no" title="statement not covered" >		regionPromise.success(<span class="fstat-no" title="function not covered" >function (region) {</span></span>
+<span class="cstat-no" title="statement not covered" >			var updatePromise = regionServices.updateDefaultRegion(cache.getUser().id, region.id);</span>
+<span class="cstat-no" title="statement not covered" >			updatePromise.success(<span class="fstat-no" title="function not covered" >function (data) {</span></span>
+<span class="cstat-no" title="statement not covered" >				var updatePromise = regionServices.updateUserDefaultRegion(cache.getUser().id);</span>
+<span class="cstat-no" title="statement not covered" >				updatePromise.success(<span class="fstat-no" title="function not covered" >function () {</span></span>
+<span class="cstat-no" title="statement not covered" >					$scope.$root.rootLoading = false;</span>
+<span class="cstat-no" title="statement not covered" >					$location.path('/dashboard')</span>
+				});
+<span class="cstat-no" title="statement not covered" >				updatePromise.error(<span class="fstat-no" title="function not covered" >function (data) {</span></span>
+<span class="cstat-no" title="statement not covered" >					$scope.$root.rootLoading = false;</span>
+<span class="cstat-no" title="statement not covered" >					cloudfoundry.alert(data);</span>
+				});
+			});
+<span class="cstat-no" title="statement not covered" >			updatePromise.error(<span class="fstat-no" title="function not covered" >function (data) {</span></span>
+<span class="cstat-no" title="statement not covered" >				$scope.$root.rootLoading = false;</span>
+<span class="cstat-no" title="statement not covered" >				cloudfoundry.alert(data);</span>
+			});
+		});
+<span class="cstat-no" title="statement not covered" >		regionPromise.error(<span class="fstat-no" title="function not covered" >function (data) {</span></span>
+<span class="cstat-no" title="statement not covered" >			$scope.$root.rootLoading = false;</span>
+<span class="cstat-no" title="statement not covered" >			cloudfoundry.alert(data);</span>
+		});
+	}
+&nbsp;
+<span class="cstat-no" title="statement not covered" >	$scope.forgotPassword = <span class="fstat-no" title="function not covered" >function() {</span></span>
+<span class="cstat-no" title="statement not covered" >		$location.url("/forgot-password");</span>
+<span class="cstat-no" title="statement not covered" >		$scope.cancel();</span>
+	};
+});
+&nbsp;
+loginControllers.controller('VerifyUserController', <span class="fstat-no" title="function not covered" >function($scope, $location, $http, $translate, loginService, cloudfoundry, ping) {</span>
+	//path will be /users/037c3e22-d13e-4d0d-91ce-bbb01f9128c8/verify,
+	// and array looks like: ["","users","037...","verify",""]
+<span class="cstat-no" title="statement not covered" >	var verifyCode = $location.path().split("/")[2]||"Unknown";</span>
+<span class="cstat-no" title="statement not covered" >	$scope.verifyCode = verifyCode;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >	$scope.loading = true;</span>
+<span class="cstat-no" title="statement not covered" >	validateUser(cloudfoundry, $location);</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >	$http.get(serverUrl + '/api/core/ping')</span>
+		.success(<span class="fstat-no" title="function not covered" >function(){</span>
+<span class="cstat-no" title="statement not covered" >			var promise = loginService.verifyUser(verifyCode);</span>
+<span class="cstat-no" title="statement not covered" >			promise.success(<span class="fstat-no" title="function not covered" >function (data, status, headers) {</span></span>
+<span class="cstat-no" title="statement not covered" >				$scope.verifyMessage = $translate.instant('mi_auth_user_email');</span>
+<span class="cstat-no" title="statement not covered" >				$scope.email = data.email;</span>
+<span class="cstat-no" title="statement not covered" >				$scope.loading = false;</span>
+			});
+<span class="cstat-no" title="statement not covered" >			promise.error(<span class="fstat-no" title="function not covered" >function (data, status, headers) {</span></span>
+<span class="cstat-no" title="statement not covered" >				$scope.verifyMessage = $translate.instant('mi_wrong_email_auth_code_reissue_code');</span>
+<span class="cstat-no" title="statement not covered" >				$scope.loading = false;</span>
+			})
+		})
+		.error(<span class="fstat-no" title="function not covered" >function (data, status, headers, config) {</span>
+			//alerts.addAlert("Could not ping server. Please try refreshing after sometime");
+		});
+&nbsp;
+<span class="cstat-no" title="statement not covered" >	$scope.ok = <span class="fstat-no" title="function not covered" >function (form) {</span></span>
+<span class="cstat-no" title="statement not covered" >		$location.path('/login');</span>
+	}
+});
+&nbsp;
+loginControllers.controller('PWRequestController', <span class="fstat-no" title="function not covered" >function($scope, $location, ping, cloudfoundry, loginService, userServices, $translate, $cookies) {</span>
+<span class="cstat-no" title="statement not covered" >	$scope.$root.rootLoading = false;</span>
+<span class="cstat-no" title="statement not covered" >	ping();</span>
+<span class="cstat-no" title="statement not covered" >	validateUser(cloudfoundry, $location);</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >	$scope.validationEmail = <span class="fstat-no" title="function not covered" >function(email) {</span></span>
+<span class="cstat-no" title="statement not covered" >		validationEmail($scope, userServices, email, false);</span>
+	};
+&nbsp;
+<span class="cstat-no" title="statement not covered" >	$scope.pwResetRequest = <span class="fstat-no" title="function not covered" >function () {</span></span>
+<span class="cstat-no" title="statement not covered" >		$scope.$root.rootLoading = true;</span>
+<span class="cstat-no" title="statement not covered" >		var pwResetRequestPromise = loginService.requestResetEmail($scope.email);</span>
+<span class="cstat-no" title="statement not covered" >		pwResetRequestPromise.success(<span class="fstat-no" title="function not covered" >function (data, status, headers) {</span></span>
+<span class="cstat-no" title="statement not covered" >			$scope.$root.rootLoading = false;</span>
+<span class="cstat-no" title="statement not covered" >			cloudfoundry.success($translate.instant('mi_send_init_pwd_confirm_email'));</span>
+<span class="cstat-no" title="statement not covered" >			$location.path('/login');</span>
+		});
+<span class="cstat-no" title="statement not covered" >		pwResetRequestPromise.error(<span class="fstat-no" title="function not covered" >function (data) {</span></span>
+<span class="cstat-no" title="statement not covered" >			$scope.$root.rootLoading = false;</span>
+<span class="cstat-no" title="statement not covered" >			data.message = $translate.instant('mi_dont_send_init_pwd_retry') +'&lt;br&gt;' + data.errors[0].message;</span>
+<span class="cstat-no" title="statement not covered" >			cloudfoundry.alert(data);</span>
+		});
+	}
+});
+&nbsp;
+loginControllers.controller('PWResetController', <span class="fstat-no" title="function not covered" >function($scope, $location, $http, loginService, cloudfoundry, ping, $translate) {</span>
+<span class="cstat-no" title="statement not covered" >	var verifyCode = $location.path().split("/")[2]||"Unknown";</span>
+<span class="cstat-no" title="statement not covered" >	$scope.verifyCode = verifyCode;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >	ping();</span>
+<span class="cstat-no" title="statement not covered" >	validateUser(cloudfoundry, $location);</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >	$scope.pwReset = <span class="fstat-no" title="function not covered" >function () {</span></span>
+<span class="cstat-no" title="statement not covered" >		if ($scope.password == undefined || $scope.password == '') {</span>
+<span class="cstat-no" title="statement not covered" >			cloudfoundry.alert($translate.instant('mi_dont_input_pwd'));</span>
+<span class="cstat-no" title="statement not covered" >			return false;</span>
+		}
+<span class="cstat-no" title="statement not covered" >		if ($scope.confirmPassword == undefined || $scope.confirmPassword == '') {</span>
+<span class="cstat-no" title="statement not covered" >			cloudfoundry.alert($translate.instant('mi_dont_input_pwd'));</span>
+<span class="cstat-no" title="statement not covered" >			return false;</span>
+		}
+		// 비밀번호와 비밀번호 확인이 일치하는지 조건
+<span class="cstat-no" title="statement not covered" >		if ($scope.password != $scope.confirmPassword) {</span>
+<span class="cstat-no" title="statement not covered" >			cloudfoundry.alert($translate.instant('mi_wrong_pwd'));</span>
+<span class="cstat-no" title="statement not covered" >			return false;</span>
+		}
+&nbsp;
+<span class="cstat-no" title="statement not covered" >		$scope.$root.rootLoading = true;</span>
+<span class="cstat-no" title="statement not covered" >		var message = '';</span>
+<span class="cstat-no" title="statement not covered" >		var body = {};</span>
+<span class="cstat-no" title="statement not covered" >		body['password'] = String($scope.password);</span>
+<span class="cstat-no" title="statement not covered" >		body['verifyCode'] = String($scope.verifyCode);</span>
+<span class="cstat-no" title="statement not covered" >		var pwResetPromise = loginService.resetPassword(body);</span>
+<span class="cstat-no" title="statement not covered" >		pwResetPromise.success(<span class="fstat-no" title="function not covered" >function (data) {</span></span>
+<span class="cstat-no" title="statement not covered" >			$scope.$root.rootLoading = false;</span>
+<span class="cstat-no" title="statement not covered" >			message = $translate.instant('mi_change_pwd');</span>
+<span class="cstat-no" title="statement not covered" >			cloudfoundry.success(message);</span>
+<span class="cstat-no" title="statement not covered" >			$location.path('/login');</span>
+		});
+<span class="cstat-no" title="statement not covered" >		pwResetPromise.error(<span class="fstat-no" title="function not covered" >function (data) {</span></span>
+<span class="cstat-no" title="statement not covered" >			$scope.$root.rootLoading = false;</span>
+<span class="cstat-no" title="statement not covered" >			message = $translate.instant('mi_wrong_auth_code_init_pwd');</span>
+<span class="cstat-no" title="statement not covered" >			cloudfoundry.alert(message);</span>
+		})
+	}
+});</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Fri Feb 10 2017 07:14:31 GMT+0000 (UTC)
+</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>

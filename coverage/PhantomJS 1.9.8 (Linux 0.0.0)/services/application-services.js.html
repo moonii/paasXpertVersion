@@ -1,0 +1,995 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for services/application-services.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../index.html">all files</a> / <a href="index.html">services/</a> application-services.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">2.19% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>3/137</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/6</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/56</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">2.19% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>3/137</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260
+261
+262
+263
+264
+265
+266
+267
+268
+269
+270
+271
+272
+273
+274
+275
+276
+277
+278
+279
+280
+281
+282
+283
+284
+285
+286
+287
+288
+289
+290
+291
+292
+293
+294
+295
+296
+297
+298
+299
+300
+301
+302
+303
+304
+305
+306
+307
+308
+309
+310
+311</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">'use strict';
+&nbsp;
+var applicationServices = angular.module('application.services', ['common.services']);
+&nbsp;
+applicationServices.factory('applicationServices', <span class="fstat-no" title="function not covered" >function ($http, cache, cloudfoundry, Upload) {</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    var applicationServices = {};</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    applicationServices.listAllApplications = <span class="fstat-no" title="function not covered" >function() {</span></span>
+<span class="cstat-no" title="statement not covered" >        return cloudfoundry.retrieveResource(cloudfoundry.resourcePromise(serverUrl + context + apiVersion + '/apps/all', 'GET'));</span>
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    applicationServices.listAllApplicationsSimple = <span class="fstat-no" title="function not covered" >function() {</span></span>
+<span class="cstat-no" title="statement not covered" >        return cloudfoundry.retrieveResource(cloudfoundry.resourcePromise(serverUrl + context + apiVersion + '/apps/all/simple', 'GET'));</span>
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    applicationServices.listApplications = <span class="fstat-no" title="function not covered" >function(size, page, condition) {</span></span>
+<span class="cstat-no" title="statement not covered" >        return cloudfoundry.retrieveResource(cloudfoundry.resourcePromise(serverUrl + context + apiVersion + '/apps?size='+size+'&amp;page='+page+'&amp;condition='+condition, 'GET'));</span>
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    applicationServices.listAppsByOrganization = <span class="fstat-no" title="function not covered" >function(guid) {</span></span>
+<span class="cstat-no" title="statement not covered" >        return cloudfoundry.retrieveResource(cloudfoundry.resourcePromise(serverUrl + context + apiVersion + '/apps/organization/'+ guid, 'GET'));</span>
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    applicationServices.listAppsBySpace = <span class="fstat-no" title="function not covered" >function(guid) {</span></span>
+<span class="cstat-no" title="statement not covered" >        return cloudfoundry.retrieveResource(cloudfoundry.resourcePromise(serverUrl + context + apiVersion + '/spaces/'+ guid + '/apps/all', 'GET'));</span>
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    applicationServices.listApplicationsByBuildpack = <span class="fstat-no" title="function not covered" >function(size, page, buildpackName) {</span></span>
+<span class="cstat-no" title="statement not covered" >        return cloudfoundry.retrieveResource(cloudfoundry.resourcePromise(serverUrl + context + apiVersion + '/apps/buildpack?size='+size+'&amp;page='+page+'&amp;buildpackName='+buildpackName, 'GET'));</span>
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    applicationServices.getApplicationSummary = <span class="fstat-no" title="function not covered" >function(guid) {</span></span>
+<span class="cstat-no" title="statement not covered" >        return cloudfoundry.retrieveResource(cloudfoundry.resourcePromise(serverUrl + context + apiVersion + '/apps/' + guid + '/summary', 'GET'));</span>
+    }
+&nbsp;
+    // Application Scale
+<span class="cstat-no" title="statement not covered" >    applicationServices.updateApplicationScale = <span class="fstat-no" title="function not covered" >function(applicationId, body) {</span></span>
+<span class="cstat-no" title="statement not covered" >        return cloudfoundry.retrieveResource(cloudfoundry.resourcePromise(serverUrl + context + apiVersion + '/apps/' + applicationId + '/scale', 'PUT', body));</span>
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    applicationServices.updateApplicationState = <span class="fstat-no" title="function not covered" >function(applicationId, state) {</span></span>
+<span class="cstat-no" title="statement not covered" >        return cloudfoundry.retrieveResource(cloudfoundry.resourcePromise(serverUrl + context + apiVersion + '/apps/' + applicationId + '/state/' + state, 'PUT'));</span>
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    applicationServices.deleteApplication = <span class="fstat-no" title="function not covered" >function(applicationId, state) {</span></span>
+<span class="cstat-no" title="statement not covered" >        return cloudfoundry.retrieveResource(cloudfoundry.resourcePromise(serverUrl + context + apiVersion + '/apps/' + applicationId, 'DELETE'));</span>
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    applicationServices.restageApplication = <span class="fstat-no" title="function not covered" >function(applicationId) {</span></span>
+<span class="cstat-no" title="statement not covered" >        return cloudfoundry.retrieveResource(cloudfoundry.resourcePromise(serverUrl + context + apiVersion + '/apps/' + applicationId + '/restage', 'POST'));</span>
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    applicationServices.getApplicationInstances = <span class="fstat-no" title="function not covered" >function(applicationId) {</span></span>
+<span class="cstat-no" title="statement not covered" >        return cloudfoundry.retrieveResource(cloudfoundry.resourcePromise(serverUrl + context + apiVersion + '/apps/' + applicationId + '/instances', 'GET'));</span>
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    applicationServices.getApplicationServices = <span class="fstat-no" title="function not covered" >function(applicationId) {</span></span>
+<span class="cstat-no" title="statement not covered" >        return cloudfoundry.retrieveResource(cloudfoundry.resourcePromise(serverUrl + context + apiVersion + '/apps/' + applicationId + '/service_bindings', 'GET'));</span>
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    applicationServices.getApplicationServiceBinding = <span class="fstat-no" title="function not covered" >function(applicationId, serviceInstanceId) {</span></span>
+<span class="cstat-no" title="statement not covered" >        return cloudfoundry.retrieveResource(cloudfoundry.resourcePromise(serverUrl + context + apiVersion + '/apps/' + applicationId + '/service_bindings/' + serviceInstanceId, 'GET'));</span>
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    applicationServices.createServiceBinding = <span class="fstat-no" title="function not covered" >function(body) {</span></span>
+<span class="cstat-no" title="statement not covered" >        return cloudfoundry.retrieveResource(cloudfoundry.resourcePromise(serverUrl + context + apiVersion + '/ServiceBindings', 'POST', body));</span>
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    applicationServices.deleteServiceBinding = <span class="fstat-no" title="function not covered" >function(guid) {</span></span>
+<span class="cstat-no" title="statement not covered" >        return cloudfoundry.retrieveResource(cloudfoundry.resourcePromise(serverUrl + context + apiVersion + '/ServiceBindings/' + guid, 'DELETE'));</span>
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    applicationServices.getApplicationEnv = <span class="fstat-no" title="function not covered" >function(applicationId) {</span></span>
+<span class="cstat-no" title="statement not covered" >        return cloudfoundry.retrieveResource(cloudfoundry.resourcePromise(serverUrl + context + apiVersion + '/apps/' + applicationId + '/env', 'GET'));</span>
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    applicationServices.getApplicationBlueGreen = <span class="fstat-no" title="function not covered" >function(applicationId) {</span></span>
+<span class="cstat-no" title="statement not covered" >        return cloudfoundry.retrieveResource(cloudfoundry.resourcePromise(serverUrl + context + apiVersion + '/apps/' + applicationId + '/bluegreen', 'GET'));</span>
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    applicationServices.setApplicationEnv = <span class="fstat-no" title="function not covered" >function(applicationId, body) {</span></span>
+<span class="cstat-no" title="statement not covered" >        return cloudfoundry.retrieveResource(cloudfoundry.resourcePromise(serverUrl + context + apiVersion + '/apps/' + applicationId + '/userenv', 'PUT', body));</span>
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    applicationServices.getApplicationRoutes = <span class="fstat-no" title="function not covered" >function(applicationId) {</span></span>
+<span class="cstat-no" title="statement not covered" >        return cloudfoundry.retrieveResource(cloudfoundry.resourcePromise(serverUrl + context + apiVersion + '/apps/' + applicationId + '/routes', 'GET'));</span>
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    applicationServices.createRoute = <span class="fstat-no" title="function not covered" >function(body) {</span></span>
+<span class="cstat-no" title="statement not covered" >        return cloudfoundry.retrieveResource(cloudfoundry.resourcePromise(serverUrl + context + apiVersion + '/routes', 'POST', body));</span>
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    applicationServices.mapApplicationRoute = <span class="fstat-no" title="function not covered" >function(applicationId, routeId) {</span></span>
+<span class="cstat-no" title="statement not covered" >        return cloudfoundry.retrieveResource(cloudfoundry.resourcePromise(serverUrl + context + apiVersion + '/apps/' + applicationId + '/routes/' + routeId, 'PUT'));</span>
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    applicationServices.unmapApplicationRoute = <span class="fstat-no" title="function not covered" >function(applicationId, routeId) {</span></span>
+<span class="cstat-no" title="statement not covered" >        return cloudfoundry.retrieveResource(cloudfoundry.resourcePromise(serverUrl + context + apiVersion + '/apps/' + applicationId + '/routes/' + routeId, 'DELETE'));</span>
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    applicationServices.deleteRoute = <span class="fstat-no" title="function not covered" >function(routeId) {</span></span>
+<span class="cstat-no" title="statement not covered" >        return cloudfoundry.retrieveResource(cloudfoundry.resourcePromise(serverUrl + context + apiVersion + '/routes/' + routeId, 'DELETE'));</span>
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    applicationServices.getApplicationRecentLogs = <span class="fstat-no" title="function not covered" >function(applicationId) {</span></span>
+<span class="cstat-no" title="statement not covered" >        return cloudfoundry.retrieveResource(cloudfoundry.resourcePromise(serverUrl + context + apiVersion + '/apps/' + applicationId + '/recent_logs', 'GET'));</span>
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    applicationServices.getSessionid = <span class="fstat-no" title="function not covered" >function(id, clientId, clientSecret) {</span></span>
+        // 3, sshproxy, sshproxy-secret
+<span class="cstat-no" title="statement not covered" >        var promise = $http({</span>
+            method: 'GET',
+            url: serverUrl + '/api/core/users/' + id + '/sessionid',
+            headers: {
+                'clientId': clientId,
+                'clientSecret': clientSecret
+            }
+        });
+<span class="cstat-no" title="statement not covered" >        return cloudfoundry.retrieveResource(promise);</span>
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    applicationServices.getApplicationSsh = <span class="fstat-no" title="function not covered" >function (sshProxyServer, id, sessionid) {</span></span>
+<span class="cstat-no" title="statement not covered" >        var promise = $http({</span>
+            method: 'POST',
+            url: 'https://' + sshProxyServer + '/terminal/',
+            xhrFields: {
+                withCredentials: false
+            },
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded'
+            },
+            data: $.param({'ID': id,'SESSIONID': sessionid, 'PORTAL_URL': serverUrl})
+        });
+<span class="cstat-no" title="statement not covered" >        return cloudfoundry.retrieveResource(promise);</span>
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    applicationServices.getApplicationEvents = <span class="fstat-no" title="function not covered" >function(applicationId, size, page, sort) {</span></span>
+<span class="cstat-no" title="statement not covered" >        return cloudfoundry.retrieveResource(cloudfoundry.resourcePromise(serverUrl + context + apiVersion + '/apps/' + applicationId + '/events?size='+size+'&amp;page='+page+'&amp;sort='+sort, 'GET'));</span>
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    applicationServices.listAllBuildpacks = <span class="fstat-no" title="function not covered" >function() {</span></span>
+<span class="cstat-no" title="statement not covered" >        return cloudfoundry.retrieveResource(cloudfoundry.resourcePromise(serverUrl + context + apiVersion + '/buildpacks/all', 'GET'));</span>
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    applicationServices.getOrganizationAllDomains = <span class="fstat-no" title="function not covered" >function(organizationId) {</span></span>
+<span class="cstat-no" title="statement not covered" >        return cloudfoundry.retrieveResource(cloudfoundry.resourcePromise(serverUrl + context + apiVersion + '/organizations/' + organizationId + '/domains/all', 'GET'));</span>
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    applicationServices.push = <span class="fstat-no" title="function not covered" >function(datas, scope, cache) {</span></span>
+<span class="cstat-no" title="statement not covered" >        scope.$root.loading = true;</span>
+<span class="cstat-no" title="statement not covered" >        $http.get(serverUrl + '/api/core/ping')</span>
+            .then(
+<span class="fstat-no" title="function not covered" >                function(response){</span>
+<span class="cstat-no" title="statement not covered" >                    Upload.upload({</span>
+                        method: 'POST',
+                        url: serverUrl + context + apiVersion + '/apps/push',
+                        headers: {
+                            'Accept': 'application/json',
+                            'Content-Type': 'application/json'
+                        },
+                        data: datas
+                    }).then(<span class="fstat-no" title="function not covered" >function (resp, xhr, status, error) {</span>
+<span class="cstat-no" title="statement not covered" >                        scope.$root.loading = false;</span>
+                        // console.log('Success ' + resp.config.data.file.name + 'uploaded. Response: ' + resp.data);
+<span class="cstat-no" title="statement not covered" >                        cloudfoundry.success($translate.instant('mi_create_success'));</span>
+<span class="cstat-no" title="statement not covered" >                        scope.appName = null;</span>
+<span class="cstat-no" title="statement not covered" >                        scope.customAppForm.appName.$pristine = true;</span>
+<span class="cstat-no" title="statement not covered" >                        scope.customAppForm.appName.$touched = false;</span>
+<span class="cstat-no" title="statement not covered" >                        cache.storeLocation('appName', datas.appName);</span>
+<span class="cstat-no" title="statement not covered" >                        $location.hash('log_tab');</span>
+<span class="cstat-no" title="statement not covered" >                        $location.path('/app/'+resp.data);</span>
+                    }, <span class="fstat-no" title="function not covered" >function (xhr, status, error) {</span>
+<span class="cstat-no" title="statement not covered" >                        scope.$root.loading = false;</span>
+<span class="cstat-no" title="statement not covered" >                        jQuery('.push_progress').fadeOut(300);</span>
+<span class="cstat-no" title="statement not covered" >                        cloudfoundry.alert(xhr.data);</span>
+                    }, <span class="fstat-no" title="function not covered" >function (evt) {</span>
+<span class="cstat-no" title="statement not covered" >                        if(datas.file) {</span>
+<span class="cstat-no" title="statement not covered" >                            scope.progressing = true;</span>
+<span class="cstat-no" title="statement not covered" >                            var progressPercentage = parseInt(100.0 * evt.loaded / evt.total);</span>
+<span class="cstat-no" title="statement not covered" >                            console.log('progress: ' + progressPercentage + '% ' + evt.config.data.file.name);</span>
+<span class="cstat-no" title="statement not covered" >                            $.fn.prograssBar(progressPercentage);</span>
+<span class="cstat-no" title="statement not covered" >                            if(progressPercentage == 100) {</span>
+<span class="cstat-no" title="statement not covered" >                                $timeout(<span class="fstat-no" title="function not covered" >function() {</span></span>
+<span class="cstat-no" title="statement not covered" >                                    scope.progressing = false;</span>
+<span class="cstat-no" title="statement not covered" >                                    scope.$root.loading = true;</span>
+                                }, 1000);
+                            }
+                        }
+                    });
+                },
+<span class="fstat-no" title="function not covered" >                function(response){</span>
+<span class="cstat-no" title="statement not covered" >                    scope.$root.loading = false;</span>
+<span class="cstat-no" title="statement not covered" >                    scope.error = JSON.stringify(response);</span>
+<span class="cstat-no" title="statement not covered" >                    cloudfoundry.alert(scope, scope.error);</span>
+                }
+            );
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    applicationServices.dockerPush = <span class="fstat-no" title="function not covered" >function(body) {</span></span>
+<span class="cstat-no" title="statement not covered" >        return cloudfoundry.retrieveResource(cloudfoundry.resourcePromise(serverUrl + context + apiVersion + '/apps/dockerpush', 'POST', body));</span>
+    }
+&nbsp;
+    /* app market */
+<span class="cstat-no" title="statement not covered" >    applicationServices.addAppItem = <span class="fstat-no" title="function not covered" >function(datas, scope, popDiv, event) {</span></span>
+<span class="cstat-no" title="statement not covered" >        scope.$root.loading = true;</span>
+<span class="cstat-no" title="statement not covered" >        $http.get(serverUrl + '/api/core/ping')</span>
+            .then(
+<span class="fstat-no" title="function not covered" >                function(response){</span>
+<span class="cstat-no" title="statement not covered" >                    Upload.upload({</span>
+                        method: 'POST',
+                        url: serverUrl + context + apiVersion + '/appMarkets',
+                        headers: {
+                            'Accept': 'application/json',
+                            'Content-Type': 'application/json'
+                        },
+                        data: datas
+                    }).then(<span class="fstat-no" title="function not covered" >function (resp) {</span>
+<span class="cstat-no" title="statement not covered" >                        scope.$root.loading = false;</span>
+                        // console.log('Success ' + resp.config.data.file.name + 'uploaded. Response: ' + resp.data);
+<span class="cstat-no" title="statement not covered" >                        cloudfoundry.success($translate.instant('mi_create_success'));</span>
+<span class="cstat-no" title="statement not covered" >                        scope.carouselItems = [{s3EndPoint: '', imageBanner: ''}];</span>
+<span class="cstat-no" title="statement not covered" >                        scope.slickConfig = {enabled: false};</span>
+<span class="cstat-no" title="statement not covered" >                        scope.cancelAddAppItem(popDiv, event);</span>
+<span class="cstat-no" title="statement not covered" >                        scope.getAppItems();</span>
+                    }, <span class="fstat-no" title="function not covered" >function (xhr, status, error) {</span>
+<span class="cstat-no" title="statement not covered" >                        scope.cancelAddAppItem(popDiv, event);</span>
+<span class="cstat-no" title="statement not covered" >                        scope.$root.loading = false;</span>
+<span class="cstat-no" title="statement not covered" >                        cloudfoundry.alert(xhr.data.message);</span>
+                    }, <span class="fstat-no" title="function not covered" >function (evt) {</span>
+<span class="cstat-no" title="statement not covered" >                        if(datas.file) {</span>
+<span class="cstat-no" title="statement not covered" >                            var progressPercentage = parseInt(100.0 * evt.loaded / evt.total);</span>
+<span class="cstat-no" title="statement not covered" >                            console.log('progress: ' + progressPercentage + '% ' + evt.config.data.file.name);</span>
+                        }
+                    });
+                },
+<span class="fstat-no" title="function not covered" >                function(response){</span>
+<span class="cstat-no" title="statement not covered" >                    scope.cancelAddAppItem(popDiv, event);</span>
+<span class="cstat-no" title="statement not covered" >                    scope.$root.loading = false;</span>
+<span class="cstat-no" title="statement not covered" >                    cloudfoundry.alert(response);</span>
+                }
+            );
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    applicationServices.listAppItems = <span class="fstat-no" title="function not covered" >function(size, page, category, name) {</span></span>
+<span class="cstat-no" title="statement not covered" >        return cloudfoundry.retrieveResource(cloudfoundry.resourcePromise(serverUrl + context + apiVersion + '/appMarkets?size='+size+'&amp;page='+page+'&amp;category='+category+'&amp;name='+name, 'GET'));</span>
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    applicationServices.getAppItem = <span class="fstat-no" title="function not covered" >function(guid) {</span></span>
+<span class="cstat-no" title="statement not covered" >        return cloudfoundry.retrieveResource(cloudfoundry.resourcePromise(serverUrl + context + apiVersion + '/appMarkets/' + guid, 'GET'));</span>
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    applicationServices.listAllSharedDomains = <span class="fstat-no" title="function not covered" >function() {</span></span>
+<span class="cstat-no" title="statement not covered" >        return cloudfoundry.retrieveResource(cloudfoundry.resourcePromise(serverUrl + context + apiVersion + '/shared_domains/all', 'GET'));</span>
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    applicationServices.appItemPush = <span class="fstat-no" title="function not covered" >function(datas) {</span></span>
+<span class="cstat-no" title="statement not covered" >        var promise = $http({</span>
+            method: 'POST',
+            url: serverUrl + context + apiVersion + '/apps/marketpush',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            data: datas
+        });
+<span class="cstat-no" title="statement not covered" >        return cloudfoundry.retrieveResource(promise);</span>
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    applicationServices.checkAppItemsBySpace = <span class="fstat-no" title="function not covered" >function (guid) {</span></span>
+<span class="cstat-no" title="statement not covered" >        return cloudfoundry.retrieveResource(cloudfoundry.resourcePromise(serverUrl + context + apiVersion + '/app_markets/spaces/' + guid, 'GET'));</span>
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    applicationServices.deleteDownloadAppItem = <span class="fstat-no" title="function not covered" >function(applicationId, ownerId) {</span></span>
+<span class="cstat-no" title="statement not covered" >        return cloudfoundry.retrieveResource(cloudfoundry.resourcePromise(serverUrl + context + apiVersion + '/appMarkets/downapps/' + applicationId, 'DELETE'));</span>
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    applicationServices.updateEnvDownloadAppItem = <span class="fstat-no" title="function not covered" >function(applicationId, datas) {</span></span>
+<span class="cstat-no" title="statement not covered" >        $http.get(serverUrl + '/api/core/ping')</span>
+            .then(
+<span class="fstat-no" title="function not covered" >                function(response) {</span>
+<span class="cstat-no" title="statement not covered" >                    Upload.upload({</span>
+                        method: 'POST',
+                        url: serverUrl + context + apiVersion + '/appMarkets/downapps/' + applicationId + '/updateEnv/',
+                        headers: {
+                            'Accept': 'application/json',
+                            'Content-Type': 'application/json'
+                        },
+                        data: datas
+                    });
+                },
+<span class="fstat-no" title="function not covered" >                function(response){</span>
+<span class="cstat-no" title="statement not covered" >                    scope.$root.loading = false;</span>
+<span class="cstat-no" title="statement not covered" >                    cloudfoundry.alert(response);</span>
+                }
+            );
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    return applicationServices;</span>
+&nbsp;
+});
+&nbsp;
+applicationServices.factory('FetchFileFactory', <span class="fstat-no" title="function not covered" >function($http) {</span>
+<span class="cstat-no" title="statement not covered" >    var _factory = {};</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    _factory.fetchFile = <span class="fstat-no" title="function not covered" >function(file) {</span></span>
+<span class="cstat-no" title="statement not covered" >        return $http.get(serverUrl + context + apiVersion + '/app/resource?resource=' + encodeURIComponent(file));</span>
+    };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    return _factory;</span>
+});</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Fri Feb 10 2017 07:14:31 GMT+0000 (UTC)
+</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>

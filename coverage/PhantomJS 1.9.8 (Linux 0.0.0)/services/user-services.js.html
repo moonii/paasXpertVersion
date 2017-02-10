@@ -1,0 +1,554 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for services/user-services.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../index.html">all files</a> / <a href="index.html">services/</a> user-services.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">2.67% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>2/75</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/0</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/36</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">2.67% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>2/75</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">'use strict';
+&nbsp;
+var userServices = angular.module('user.services', ['common.services']);
+&nbsp;
+userServices.factory('userServices', <span class="fstat-no" title="function not covered" >function ($http, cache, $q, $compile, cloudfoundry) {</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    var userServices = {};</span>
+    
+<span class="cstat-no" title="statement not covered" >    userServices.listAllUsers = <span class="fstat-no" title="function not covered" >function () {</span></span>
+<span class="cstat-no" title="statement not covered" >        return cloudfoundry.retrieveResource(cloudfoundry.resourcePromise(serverUrl + context + apiVersion + '/users/all', 'GET'));</span>
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    userServices.listUsers = <span class="fstat-no" title="function not covered" >function (size, page, condition) {</span></span>
+<span class="cstat-no" title="statement not covered" >        return cloudfoundry.retrieveResource(cloudfoundry.resourcePromise(serverUrl + context + apiVersion + '/users?size='+size+'&amp;page='+page+'&amp;condition='+condition, 'GET'));</span>
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    userServices.getUserInfo = <span class="fstat-no" title="function not covered" >function (guid) {</span></span>
+<span class="cstat-no" title="statement not covered" >        return cloudfoundry.retrieveResource(cloudfoundry.resourcePromise(serverUrl + context + apiVersion + '/users/info/'+guid, 'GET'));</span>
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    userServices.listUserOrganizations = <span class="fstat-no" title="function not covered" >function (guid) {</span></span>
+<span class="cstat-no" title="statement not covered" >        return cloudfoundry.retrieveResource(cloudfoundry.resourcePromise(serverUrl + context + apiVersion + '/users/'+guid+'/organizations', 'GET'));</span>
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    userServices.listAllOrganizations = <span class="fstat-no" title="function not covered" >function () {</span></span>
+<span class="cstat-no" title="statement not covered" >        return cloudfoundry.retrieveResource(cloudfoundry.resourcePromise(serverUrl + context + apiVersion + '/organizations/all', 'GET'));</span>
+    }
+    
+<span class="cstat-no" title="statement not covered" >    userServices.listOrganizationUsers = <span class="fstat-no" title="function not covered" >function (guid) {</span></span>
+<span class="cstat-no" title="statement not covered" >        return cloudfoundry.retrieveResource(cloudfoundry.resourcePromise(serverUrl + context + apiVersion + '/organizations/'+guid+'/users', 'GET'));</span>
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    userServices.fetchByEmail = <span class="fstat-no" title="function not covered" >function (email) {</span></span>
+<span class="cstat-no" title="statement not covered" >        return cloudfoundry.retrieveResource(cloudfoundry.resourcePromise(serverUrl + '/api/core/users/fetch-by-email?email=' + email, 'GET'));</span>
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    userServices.listAllPortalAdmins = <span class="fstat-no" title="function not covered" >function () {</span></span>
+<span class="cstat-no" title="statement not covered" >        return cloudfoundry.retrieveResource(cloudfoundry.resourcePromise(serverUrl +'/api/core/admins/all', 'GET'));</span>
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    userServices.listPortalAdmins = <span class="fstat-no" title="function not covered" >function (size, page) {</span></span>
+<span class="cstat-no" title="statement not covered" >        return cloudfoundry.retrieveResource(cloudfoundry.resourcePromise(serverUrl +'/api/core/admins?size='+size+'&amp;page='+page, 'GET'));</span>
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    userServices.listAllPortalUsers = <span class="fstat-no" title="function not covered" >function () {</span></span>
+<span class="cstat-no" title="statement not covered" >        return cloudfoundry.retrieveResource(cloudfoundry.resourcePromise(serverUrl +'/api/core/users/all', 'GET'));</span>
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    userServices.listPortalUsers = <span class="fstat-no" title="function not covered" >function (size, page) {</span></span>
+<span class="cstat-no" title="statement not covered" >        return cloudfoundry.retrieveResource(cloudfoundry.resourcePromise(serverUrl +'/api/core/users?size='+size+'&amp;page='+page, 'GET'));</span>
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    userServices.listPortalUsersByOrganization = <span class="fstat-no" title="function not covered" >function (size, page, organizationId) {</span></span>
+<span class="cstat-no" title="statement not covered" >        return cloudfoundry.retrieveResource(cloudfoundry.resourcePromise(serverUrl +'/api/core/users/organization?size='+size+'&amp;page='+page+'&amp;organizationId='+organizationId, 'GET'));</span>
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    userServices.listPortalUsersById = <span class="fstat-no" title="function not covered" >function (size, page, userId) {</span></span>
+<span class="cstat-no" title="statement not covered" >        return cloudfoundry.retrieveResource(cloudfoundry.resourcePromise(serverUrl +'/api/core/users/id?size='+size+'&amp;page='+page+'&amp;userId='+userId, 'GET'));</span>
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    userServices.listPortalUsersByEmail = <span class="fstat-no" title="function not covered" >function (size, page, email) {</span></span>
+<span class="cstat-no" title="statement not covered" >        return cloudfoundry.retrieveResource(cloudfoundry.resourcePromise(serverUrl +'/api/core/users/email?size='+size+'&amp;page='+page+'&amp;email='+email, 'GET'));</span>
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    userServices.listPortalUsersByName = <span class="fstat-no" title="function not covered" >function (size, page, userName) {</span></span>
+<span class="cstat-no" title="statement not covered" >        return cloudfoundry.retrieveResource(cloudfoundry.resourcePromise(serverUrl +'/api/core/users/name?size='+size+'&amp;page='+page+'&amp;userName='+userName, 'GET'));</span>
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    userServices.listPortalUsersByOrganizationUser = <span class="fstat-no" title="function not covered" >function (size, page, organizationId, userId) {</span></span>
+<span class="cstat-no" title="statement not covered" >        return cloudfoundry.retrieveResource(cloudfoundry.resourcePromise(serverUrl +'/api/core/users/organization/user?size='+size+'&amp;page='+page+'&amp;organizationId='+organizationId+'&amp;userId='+userId, 'GET'));</span>
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    userServices.listPortalUsersByRegion = <span class="fstat-no" title="function not covered" >function (size, page, regionId) {</span></span>
+<span class="cstat-no" title="statement not covered" >        return cloudfoundry.retrieveResource(cloudfoundry.resourcePromise(serverUrl +'/api/core/users/region?size='+size+'&amp;page='+page+'&amp;regionId='+regionId, 'GET'));</span>
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    userServices.listPortalUsersByRegionOrganization = <span class="fstat-no" title="function not covered" >function (size, page, regionId, organizationId) {</span></span>
+<span class="cstat-no" title="statement not covered" >        return cloudfoundry.retrieveResource(cloudfoundry.resourcePromise(serverUrl +'/api/core/users/region/organization?size='+size+'&amp;page='+page+'&amp;regionId='+regionId+'&amp;organizationId='+organizationId, 'GET'));</span>
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    userServices.listPortalUsersByRegionUser = <span class="fstat-no" title="function not covered" >function (size, page, regionId, userId) {</span></span>
+<span class="cstat-no" title="statement not covered" >        return cloudfoundry.retrieveResource(cloudfoundry.resourcePromise(serverUrl +'/api/core/users/region/user?size='+size+'&amp;page='+page+'&amp;regionId='+regionId+'&amp;userId='+userId, 'GET'));</span>
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    userServices.listPortalUsersByRegionOrganizationUser = <span class="fstat-no" title="function not covered" >function (size, page, regionId, organizationId, userId) {</span></span>
+<span class="cstat-no" title="statement not covered" >        return cloudfoundry.retrieveResource(cloudfoundry.resourcePromise(serverUrl +'/api/core/users/region/organization/user?size='+size+'&amp;page='+page+'&amp;regionId='+regionId+'&amp;organizationId='+organizationId+'&amp;userId='+userId, 'GET'));</span>
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    userServices.getPortalUser = <span class="fstat-no" title="function not covered" >function (id) {</span></span>
+<span class="cstat-no" title="statement not covered" >        return cloudfoundry.retrieveResource(cloudfoundry.resourcePromise(serverUrl + '/api/core/users/' + id, 'GET'));</span>
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    userServices.getRegion = <span class="fstat-no" title="function not covered" >function (id) {</span></span>
+<span class="cstat-no" title="statement not covered" >        return cloudfoundry.retrieveResource(cloudfoundry.resourcePromise(serverUrl +'/api/core/users/' + id + '/regions', 'GET'));</span>
+    }
+    
+<span class="cstat-no" title="statement not covered" >    userServices.activateAdmin = <span class="fstat-no" title="function not covered" >function (id) {</span></span>
+<span class="cstat-no" title="statement not covered" >        return cloudfoundry.retrieveResource(cloudfoundry.resourcePromise(serverUrl + '/api/core/admins/' + id + '/activate', 'PATCH'));</span>
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    userServices.deactivateAdmin = <span class="fstat-no" title="function not covered" >function (id) {</span></span>
+<span class="cstat-no" title="statement not covered" >        return cloudfoundry.retrieveResource(cloudfoundry.resourcePromise(serverUrl + '/api/core/admins/' + id + '/deactivate', 'PATCH'));</span>
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    userServices.signup = <span class="fstat-no" title="function not covered" >function (form) {</span></span>
+<span class="cstat-no" title="statement not covered" >        var promise = $http({</span>
+            method: 'POST',
+            url: serverUrl + '/api/core/signup',
+            headers: {'Content-Type': 'application/json;charset=utf-8', 'Accept': 'application/json;charset=utf-8'},
+            data: {'email': form.email,
+                'password': form.password,
+                'name': form.name,
+                'roles': form.roles,
+                'company': form.company
+            }
+        });
+<span class="cstat-no" title="statement not covered" >        return cloudfoundry.retrieveResource(promise);</span>
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    userServices.addAdmin = <span class="fstat-no" title="function not covered" >function (adminId, userId, regionIds, body) {</span></span>
+<span class="cstat-no" title="statement not covered" >        return cloudfoundry.retrieveResource(cloudfoundry.resourcePromise(serverUrl + '/api/core/admins/' + adminId + '/users/' + userId + '?regionIds=' + regionIds, 'POST', body));</span>
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    userServices.addSudouser = <span class="fstat-no" title="function not covered" >function (userId, regionId) {</span></span>
+<span class="cstat-no" title="statement not covered" >        return cloudfoundry.retrieveResource(cloudfoundry.resourcePromise(serverUrl + '/api/core/users/' + userId + '/regions/' + regionId, 'POST'));</span>
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    userServices.fetchByEmail = <span class="fstat-no" title="function not covered" >function (email) {</span></span>
+<span class="cstat-no" title="statement not covered" >        return cloudfoundry.retrieveResource(cloudfoundry.resourcePromise(serverUrl + '/api/core/users/fetch-by-email?email=' + email, 'GET'));</span>
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    userServices.validateByEmail = <span class="fstat-no" title="function not covered" >function (email) {</span></span>
+<span class="cstat-no" title="statement not covered" >        return cloudfoundry.retrieveResource(cloudfoundry.resourcePromise(serverUrl + '/api/core/users/validate-by-email?email=' + email, 'GET'));</span>
+    }
+    
+<span class="cstat-no" title="statement not covered" >    userServices.createUser = <span class="fstat-no" title="function not covered" >function() {</span></span>
+<span class="cstat-no" title="statement not covered" >        return cloudfoundry.retrieveResource(cloudfoundry.resourcePromise(serverUrl + ''))</span>
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    userServices.activeUser = <span class="fstat-no" title="function not covered" >function(id) {</span></span>
+<span class="cstat-no" title="statement not covered" >        return cloudfoundry.retrieveResource(cloudfoundry.resourcePromise(serverUrl + '/api/core/users/' + id + '/activate', 'PATCH'));</span>
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    userServices.deactiveUser = <span class="fstat-no" title="function not covered" >function (id) {</span></span>
+<span class="cstat-no" title="statement not covered" >        return cloudfoundry.retrieveResource(cloudfoundry.resourcePromise(serverUrl + '/api/core/users/' + id + '/deactivate', 'PATCH'));</span>
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    userServices.getUser = <span class="fstat-no" title="function not covered" >function(id) {</span></span>
+<span class="cstat-no" title="statement not covered" >        return cloudfoundry.retrieveResource(cloudfoundry.resourcePromise(serverUrl + '/api/core/users/' + id, 'GET'));</span>
+    }
+    
+<span class="cstat-no" title="statement not covered" >    userServices.getPortalUserOrgAll = <span class="fstat-no" title="function not covered" >function(id) {</span></span>
+<span class="cstat-no" title="statement not covered" >        return cloudfoundry.retrieveResource(cloudfoundry.resourcePromise(serverUrl + '/api/core/users/' + id + '/orgs/all', 'GET'));</span>
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    userServices.getQuota = <span class="fstat-no" title="function not covered" >function(guid) {</span></span>
+<span class="cstat-no" title="statement not covered" >        return cloudfoundry.retrieveResource(cloudfoundry.resourcePromise(serverUrl + context + apiVersion + '/quotas/' + guid, 'GET'));</span>
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    return userServices;</span>
+&nbsp;
+});
+&nbsp;
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Fri Feb 10 2017 07:14:31 GMT+0000 (UTC)
+</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>

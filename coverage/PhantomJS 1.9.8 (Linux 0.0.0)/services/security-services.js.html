@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for services/security-services.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../index.html">all files</a> / <a href="index.html">services/</a> security-services.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">7.32% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>3/41</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/0</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/19</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">7.32% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>3/41</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">'use strict';
+&nbsp;
+var securityServices = angular.module('security.services', ['common.services']);
+&nbsp;
+securityServices.factory('securityServices', <span class="fstat-no" title="function not covered" >function ($http, cache, $q, $compile, cloudfoundry) {</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    var securityServices = {};</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    securityServices.listAllSecurityGroups = <span class="fstat-no" title="function not covered" >function () {</span></span>
+<span class="cstat-no" title="statement not covered" >        return cloudfoundry.retrieveResource(cloudfoundry.resourcePromise(serverUrl + context + apiVersion + '/security_groups/all', 'GET'));</span>
+    }
+    
+<span class="cstat-no" title="statement not covered" >    securityServices.listSecurityGroups = <span class="fstat-no" title="function not covered" >function (size, page, condition) {</span></span>
+<span class="cstat-no" title="statement not covered" >        return cloudfoundry.retrieveResource(cloudfoundry.resourcePromise(serverUrl + context + apiVersion + '/security_groups?size='+size+'&amp;page='+page+'&amp;condition='+condition, 'GET'));</span>
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    securityServices.getSecurityGroup = <span class="fstat-no" title="function not covered" >function (guid) {</span></span>
+<span class="cstat-no" title="statement not covered" >        return cloudfoundry.retrieveResource(cloudfoundry.resourcePromise(serverUrl + context + apiVersion + '/security_groups/' + guid, 'GET'));</span>
+    }
+    
+<span class="cstat-no" title="statement not covered" >    securityServices.createSecurityGroup = <span class="fstat-no" title="function not covered" >function (data) {</span></span>
+<span class="cstat-no" title="statement not covered" >        return cloudfoundry.retrieveResource(cloudfoundry.resourcePromise(serverUrl + context + apiVersion + '/security_groups', 'POST', data));</span>
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    securityServices.updateSecurityGroup = <span class="fstat-no" title="function not covered" >function (data) {</span></span>
+<span class="cstat-no" title="statement not covered" >        return cloudfoundry.retrieveResource(cloudfoundry.resourcePromise(serverUrl + context + apiVersion + '/security_groups/' + data.guid, 'PUT', data));</span>
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    securityServices.deleteSecurityGroup = <span class="fstat-no" title="function not covered" >function (guid) {</span></span>
+<span class="cstat-no" title="statement not covered" >        return cloudfoundry.retrieveResource(cloudfoundry.resourcePromise(serverUrl + context + apiVersion + '/security_groups/' + guid, 'DELETE'));</span>
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    securityServices.bindStagingSecurityGroup = <span class="fstat-no" title="function not covered" >function (guid) {</span></span>
+<span class="cstat-no" title="statement not covered" >        return cloudfoundry.retrieveResource(cloudfoundry.resourcePromise(serverUrl + context + apiVersion + '/security_groups/staging/' + guid, 'PUT'));  </span>
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    securityServices.unbindStagingSecurityGroup = <span class="fstat-no" title="function not covered" >function (guid) {</span></span>
+<span class="cstat-no" title="statement not covered" >        return cloudfoundry.retrieveResource(cloudfoundry.resourcePromise(serverUrl + context + apiVersion + '/security_groups/staging/' + guid, 'DELETE'));</span>
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    securityServices.bindRunningSecurityGroup = <span class="fstat-no" title="function not covered" >function (guid) {</span></span>
+<span class="cstat-no" title="statement not covered" >        return cloudfoundry.retrieveResource(cloudfoundry.resourcePromise(serverUrl + context + apiVersion + '/security_groups/running/' + guid, 'PUT'));</span>
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    securityServices.unbindRunningSecurityGroup = <span class="fstat-no" title="function not covered" >function (guid) {</span></span>
+<span class="cstat-no" title="statement not covered" >        return cloudfoundry.retrieveResource(cloudfoundry.resourcePromise(serverUrl + context + apiVersion + '/security_groups/running/' + guid, 'DELETE'));</span>
+    }
+    
+<span class="cstat-no" title="statement not covered" >    return securityServices;</span>
+&nbsp;
+});
+&nbsp;
+securityServices.factory('securitySpaceServices', <span class="fstat-no" title="function not covered" >function (cloudfoundry) {</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    var securitySpaceServices = {};</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    securitySpaceServices.listAllSecurityGroupsSpaces = <span class="fstat-no" title="function not covered" >function () {</span></span>
+<span class="cstat-no" title="statement not covered" >        return cloudfoundry.retrieveResource(cloudfoundry.resourcePromise(serverUrl + context + apiVersion + '/security_groups/spaces/all', 'GET'));</span>
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    securitySpaceServices.listSecurityGroupsSpaces = <span class="fstat-no" title="function not covered" >function (size, page, condition) {</span></span>
+<span class="cstat-no" title="statement not covered" >        return cloudfoundry.retrieveResource(cloudfoundry.resourcePromise(serverUrl + context + apiVersion + '/security_groups/spaces?size='+size+'&amp;page='+page+'&amp;condition='+condition, 'GET'));</span>
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    securitySpaceServices.getSecurityGroupSpace = <span class="fstat-no" title="function not covered" >function (guid) {</span></span>
+<span class="cstat-no" title="statement not covered" >        return cloudfoundry.retrieveResource(cloudfoundry.resourcePromise(serverUrl + context + apiVersion + '/security_groups/' + guid + '/spaces', 'GET'));</span>
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    securitySpaceServices.listSpacesByOrg = <span class="fstat-no" title="function not covered" >function (guid) {</span></span>
+<span class="cstat-no" title="statement not covered" >        return cloudfoundry.retrieveResource(cloudfoundry.resourcePromise(serverUrl + context + apiVersion + '/organizations/' + guid + '/spaces', 'GET'));</span>
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    securitySpaceServices.deleteSecuritySpace = <span class="fstat-no" title="function not covered" >function (securityGuid, spaceGuid) {</span></span>
+<span class="cstat-no" title="statement not covered" >        return cloudfoundry.retrieveResource(cloudfoundry.resourcePromise(serverUrl + context + apiVersion + '/security_groups/' + securityGuid + '/spaces/' + spaceGuid, 'DELETE'));</span>
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    securitySpaceServices.createSecuritySpace = <span class="fstat-no" title="function not covered" >function (securityGuid, spaceGuid) {</span></span>
+<span class="cstat-no" title="statement not covered" >        return cloudfoundry.retrieveResource(cloudfoundry.resourcePromise(serverUrl + context + apiVersion + '/security_groups/' + securityGuid + '/spaces/' + spaceGuid, 'POST'));</span>
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    securitySpaceServices.getSecurityGroup = <span class="fstat-no" title="function not covered" >function (guid) {</span></span>
+<span class="cstat-no" title="statement not covered" >        return cloudfoundry.retrieveResource(cloudfoundry.resourcePromise(serverUrl + context + apiVersion + '/security_groups/' + guid + '/spaces', 'GET'));</span>
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    return securitySpaceServices;</span>
+&nbsp;
+});</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Fri Feb 10 2017 07:14:31 GMT+0000 (UTC)
+</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>
